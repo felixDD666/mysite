@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+	 	<title>{{respuesta}}</title>
+	 </head>
+
+	<body ng-app = "app">
+		<!-- Scripts -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.1/angular.js"> </script>
+		<script type="text/javascript" src="../../static/js/principal.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+		
+
+		<nav>
+	        <ul>
+	            <li><a href="route">Datos personales</a></li>
+	            <li><a href="principal">Descargas</a></li>
+	            
+	        </ul>
+    	</nav>
+    	<hr />
+
+    	<div ng-view></div>
+
+		
+			
+		
+		
+		<!--primer ejemplo
+		<div class="container">
+			Entiendes el contenido de este libro?
+			<input type="checkbox" ng-model="respuesta">
+			<div ng-hide="respuesta">
+				<h2>Me esforzare más!</h2>
+			</div>
+			<div ng-show="respuesta">
+				<h2>Felicidades!</h2>
+			</div>
+		</div>
+		-->
+
+
+		<!--Segundo ejemplo
+		<div class="container" ng-controller="miCtrl1">
+		<h1 ng-bind="mensaje"></h1>
+		</div>
+		<script>
+		 	function miCtrl1 ($scope) {
+		 	$scope.mensaje = 'Mensaje desde el controlador1';
+		 	}
+		</script>
+		-->
+		
+
+		<!--Tercer ejemplo 
+		<script>
+		function miCtrl2 ($scope) {
+			$scope.mensaje = 'Mensaje desde el controlador2';
+			}
+		</script>
+		<div class="container" ng-controller="miCtrl2">
+			<h1 ng-bind="mensaje"></h1>
+		</div>
+		-->
+
+	
+		<!--cuarto ejemplo	
+		<div class="container" ng-controller="miCtrl3">
+			<h1 ng-bind="mensaje"></h1>
+			</div>
+			<script>
+				function miCtrl3 ($scope) {
+				$scope.mensaje = 'Mensaje desde el controlador3';
+			}
+		</script>
+		-->
+
+		<!--padre e hijos, quinto ejemplo
+		<div class="container">
+		<div ng-controller="padreCtrl">
+			<button ng-click="logPadre()">Padre</button>
+			<div ng-controller="hijoCtrl">
+				<button ng-click="logHijo()">Hijo</button>
+				<div ng-controller="nietoCtrl">
+					<button ng-click="logNieto()">Nieto</button>
+				</div>
+			</div>
+		</div>
+		</div>
+		<script>
+			function padreCtrl ($scope) {
+				$scope.padre = 'Soy el padre';
+				$scope.logPadre = function(){
+					console.log($scope.padre);
+				}
+			}
+			function hijoCtrl ($scope) {
+				$scope.hijo = 'Soy el primer Hijo';
+				$scope.edad = 36;
+				$scope.logHijo = function(){
+					console.log($scope.hijo, $scope.edad);
+				}
+			}
+			function nietoCtrl ($scope) {
+				$scope.nieto = 'Soy el nieto';
+				$scope.edad = 4;
+				$scope.logNieto = function(){
+					console.log($scope.nieto, $scope.edad, $scope.hijo);
+				}
+			}
+		</script>
+		-->
+
+
+		<!--sexto: bindings-->
+		<!--one time binding poniendo :: delante de la variable bind.
+
+		<div ng-controller="ctrl">
+			<p ng-bind="mensaje"></p>
+			<input type="text" ng-model="mensaje">
+		</div>
+		<script>
+			function ctrl($scope) {
+				$scope.mensaje = 'hey';
+		 }
+		</script>
+
+		-->
+
+
+		<!--Observador
+		<div ng-controller="Controlador">
+			<form action="#">
+				Contraseña: <input type="password" ng-model="password">
+				<p ng-show="errorMinimo">Error: No cumple con el mínimo de caracteres (6)</p>
+			</form>
+		</div>
+
+		<script>
+			angular.module('app', []).controller('Controlador', function ($scope) {
+				$scope.errorMinimo = false;
+				$scope.$watch('password', function (nuevo, anterior) {
+				if (!nuevo) return;
+
+				if (nuevo.length < 6) {
+					$scope.errorMinimo = true;
+					} else {
+					$scope.errorMinimo = false;
+					}
+				})
+			});
+		</script>
+		-->
+
+
+		<!--Observador de grupos (no funciona)
+		<div ng-controller="Controlador">
+			<form action="#">
+				Contraseña: <input type="password" ng-model="password"><br><br>
+				Rectificar: <input type="password" ng-model="password2">
+				<p ng-hide="coincidencia">Error: Las contraseñas no coinciden</p>
+			</form>
+		</div>
+		<script>
+			angular.module('app', []).controller('Controlador', function ($scope) {
+				$scope.coincidencia = false;
+				$scope.$watchGroup(['password', 'password2'], function (nuevos, anteriores) {
+					if (!nuevos) return;
+					
+					if (nuevos[0] === nuevos[1]) {
+						$scope.coincidencia = true;
+					} else {
+						$scope.coincidencia = false;
+					}
+				})
+			});
+		</script>
+		-->
+
+
+		<!--controller as
+		<div ng-controller="ctrl as lista">
+			{{ lista.elementos }}
+		</div>
+		
+		<script>
+			function ctrl() {
+			this.elementos = 'uno, dos, tres, cuatro.';
+			}
+		</script>
+		-->
+ 	</body>
+ </html>
