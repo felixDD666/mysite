@@ -126,17 +126,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
-#STATIC_URL = '/static/'
+STATIC_URL = '/static/'
 
 
-#STATIC_ROOT = "/var/www/statics"
+STATIC_ROOT = "/var/www/statics"
 
-#STATIC_URL = '/static/'
+STATIC_URL = '/static/'
 
-#STATICFILES_DIRS = (
+STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-#    os.path.join(BASE_DIR,'polls/static'),
-#    '/var/www/statics/'
+    os.path.join(BASE_DIR,'polls/static'),
+    '/var/www/statics/'
 #)
