@@ -131,7 +131,7 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = "/var/www/statics"
 
-STATIC_URL = '/static/'
+
 
 STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
