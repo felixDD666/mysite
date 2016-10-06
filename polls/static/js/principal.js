@@ -2,24 +2,13 @@
     //funcion para minimo de caracteres;
     var app = angular.module('app',[])
 
-    var func1 = function($scope){
-        console.log("hola1");
-        var hide = true;
-        console.log(hide);
-        $scope.func1 = function() {
-            hide = false;
-            console.log(hide);
-        }
-    };
-
-    app.controller("Controlador1", func1);
 
     var func2 = function($scope) {
         console.log("hola2");
             
         $scope.errorMinimo = false;
 
-        $scope.$watch('Name', function (nuevo, anterior) {
+        $scope.$watch('name', function (nuevo, anterior) {
 
         if (!nuevo) return;
 
@@ -31,7 +20,7 @@
         })
     }
 
-    app.controller("Controlador2", func2)
+    app.controller("Controlador", func2)
 
     var func3 = function ($scope) {
         $(document).on("scroll", function(){
@@ -49,24 +38,17 @@
     app.controller("Controlador2", func3)
 
 
+    var formFunc= function ($scope) {
+        console.log("holaform");
+        $scope.formData = {};
 
-    // Configuración de las rutas
-    /* para cuando necesitemos navegar
-    app.config(function($routeProvider) {
+        $scope.submitForm = function (formData) {
+            alert('Form submitted with' + JSON.stringify(formData));
+        };
+    }
 
-        $routeProvider
-            .when('/', {
-                templateUrl : '../../../templates/polls/pruebaRoute.html',
-                controller  : 'Controlador1'
-            })
-            .when('/principal', {
-                templateUrl : '../../../templates/polls/pruebaRoute.html',
-                controller  : 'Controlador1'
-            })
-            
-    });
+    app.controller("Controlador3" ,  formFunc);
 
-    */
 
 
 

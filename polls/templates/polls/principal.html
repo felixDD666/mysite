@@ -15,7 +15,7 @@
 
     <!-- css -->
     <link href="../../static/css/bootstrap.css" rel="stylesheet">
-    <link href="../../static/polls/style.css" rel="stylesheet" media="screen">
+    <link href="../../static/css/style.css" rel="stylesheet" media="screen">
     <link href="../../static/css/agency.css" rel="stylesheet">
     <!--font awesome(iconos y  tal)-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet" type="text/css">
@@ -48,7 +48,7 @@
 
     <!-- PESTAÑAS -->
     <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
-        <div class="container">
+        <div class="container" ng-controller="Controlador2">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -98,7 +98,7 @@
     <section id="expli">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
+                <div class="col-lg-12 col-md-12 col-xs-12 text-center">
                     <h2 class="section-heading">La podología</h2>
                     <h3 class="alertText">Poner foto 666 fondo</h3>
                     <h3><br><br></h3>
@@ -220,10 +220,11 @@
                             </div>
                         </li>
                         <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <h4>Dejame<br>Ayudarte</h4>
-                                <h4 class="alertText">Poner curriculum para descargar</h4>
-                            </div>
+                            <a href="../../static/polls/hola.txt" download="HOLA">
+                                <div class="timeline-image">
+                                    <h4>Descargar<br>CV</h4> 
+                                </div>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -344,10 +345,10 @@
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    Category
+                                    #1
                                 </div>
                                 <div class="project-name">
-                                        Quiropodología
+                                        <b>Quiropodología</b>
                                 </div>
                             </div>
                         </div>
@@ -359,10 +360,10 @@
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    Category
+                                    #2
                                 </div>
                                 <div class="project-name">
-                                    Biomecánica
+                                    <b>Biomecánica</b>
                                 </div>
                             </div>
                         </div>
@@ -374,10 +375,10 @@
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    Category
+                                    #3
                                 </div>
                                 <div class="project-name">
-                                    Podología Infantil
+                                    <b>Podología Infantil</b>
                                 </div>
                             </div>
                         </div>
@@ -389,10 +390,10 @@
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    Category
+                                    #4
                                 </div>
                                 <div class="project-name">
-                                    Ortopodología
+                                   <b> Ortopodología</b>
                                 </div>
                             </div>
                         </div>
@@ -406,10 +407,10 @@
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    Category
+                                    #5
                                 </div>
                                 <div class="project-name">
-                                    Pie diabético
+                                    <b>Pie diabético</b>
                                 </div>
                             </div>
                         </div>
@@ -421,10 +422,10 @@
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    Category
+                                    #6
                                 </div>
                                 <div class="project-name">
-                                    Cirugía
+                                    <b>Cirugía</b>
                                 </div>
                             </div>
                         </div>
@@ -509,37 +510,37 @@
     <aside class="clients">
         <div class="container">
             <div class="row">
-                <div class="col-md-2 col-sm-2">
+                <div class="col-md-2 col-sm-2 col-lg-2">
                     <a href="http://www.uma.es/facultad-de-ciencias-de-la-salud">
                         <img id = "uma" src="../../static/polls/images/logo.jpg" class="img-responsive img-centered" alt="">
                     </a>
                 </div>
 
-                <div class="col-md-2 col-sm-2">
+                <div class="col-md-2 col-sm-2 col-lg-2">
                     <a href="https://www.clinicasrincon.com/es">
                         <img id="cliniRincon"  src="../../static/polls/images/cliniRincon.gif" class="img-responsive img-centered" alt="">
                     </a>
                 </div>
 
-                <div class="col-md-2 col-sm-2">
+                <div class="col-md-2 col-sm-2 col-lg-2">
                     <a href="http://amoresyrodriguez.es/">
                         <img id = "ARlogo" src="../../static/polls/images/ARlogo.jpg" class="img-responsive img-centered" alt="">
                     </a>
                 </div>
 
                 
-                <div class="col-md-2 col-sm-2">
+                <div class="col-md-2 col-sm-2 col-lg-2">
                     <a href="http://www.malagacf.com/">
                         <img src="../../static/polls/images/Logo-Malaga.jpg" class="img-responsive img-centered" alt="">
                     </a>
                 </div>
             
-                <div class="col-md-2 col-sm-2">
+                <div class="col-md-2 col-sm-2 col-lg-2">
                         <a href="http://www.fisiolluch.com/">
                             <img id = "victor" src="../../static/polls/images/victorlluch.jpg" class="img-responsive img-centered" alt="">
                         </a>
                 </div>
-                <div class="col-md-2 col-sm-2">
+                <div class="col-md-2 col-sm-2 col-lg-2">
                     <a href="http://www.uma.es/facultad-de-ciencias-de-la-salud">
                         <img id = "uma" src="../../static/polls/images/uma.png" class="img-responsive img-centered" alt="">
                     </a>
@@ -559,44 +560,61 @@
 
     <!-- Contact Section -->
     <section id="contact">
-        <div class="container">
-            <div class="row">
+        <div class="container" ng-controller = "Controlador">
+            <div class="row" id="contacHead">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Contacta conmigo</h2>
-                    <h3 class="section-subheading text-muted">Dejame saber que necesitas</h3>
+                    <h2 id="contacHead" class="section-heading">Contacta conmigo</h2>
+                    <h3 id="contacSubHead"class="section-subheading text-muted">Dejame saber que necesitas</h3>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-12">
+            <div class="row" >
+                <div class="col-lg-12" ng-controller ="Controlador3">
                     <form name="sentMessage" id="contactForm" novalidate>
-                        <div class="row">
+                       
                             <div class="col-md-6">
-                                <div class="form-group" ng-controller = "Controlador2">
-                                    <input type="text" class="form-control" placeholder="Tu nombre *" id="name" required data-validation-required-message="Please enter your name." ng-model="Name">
-                                    <p class="help-block text-danger" ng-show="errorMinimo">Error: No cumple con el mínimo de caracteres (6)</p>
+                                <div class="form-group" >
+                                    <input type="text" class="form-control" placeholder="Tu nombre *" name="name" id="name" ng-model="formData.name" required>
                                     
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Tu email *" id="email" required data-validation-required-message="Please enter your email address.">
+                                    <input type="email" class="form-control" placeholder="Tu email *" name="email" id="email"  ng-model="formData.mail" ng-class="{ error: sentMessage.email.$error.required && !sentMessage.$pristine, warning: exampleForm.email.$error.email }" required>
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="form-group">
-                                    <input type="tel" class="form-control" placeholder="Tu telefono *" id="phone" required data-validation-required-message="Please enter your phone number.">
+                                    <input type="tel" class="form-control" placeholder="Tu telefono *" name="phone" id="phone" ng-model="formData.telf" required>
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
+
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <textarea class="form-control" placeholder="Tu mensaje *" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                                    <textarea class="form-control" placeholder="Tu mensaje *" name="mess" id="message"  ng-model="formData.mess" required></textarea>
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
-                            <div class="clearfix"></div>
+
                             <div class="col-lg-12 text-center">
-                                <div id="success"></div>
-                                <button type="submit" class="btn btn-xl">Send Message</button>
+                                <span class="help-block text-danger" ng-show="!sentMessage.$pristine && sentMessage.name.$error.required">Debe ingresar el nombre</span>
                             </div>
-                        </div>
+                            <div class="col-lg-12 text-center">
+                                <span class="help-block text-danger" ng-show="!sentMessage.$pristine && sentMessage.email.$error.required">Debe ingresar el email</span>
+                                <span class="help-block text-danger" ng-show="!sentMessage.$pristine && sentMessage.email.$error.email">Email incorrecto</span>
+                            </div>
+                            
+                            <div class="col-lg-12 text-center">
+                                <span class="help-block text-danger" ng-show="!sentMessage.$pristine && sentMessage.phone.$error.required">Debe ingresar el telefono</span>
+                            </div>
+                            <div class="col-lg-12 text-center">
+                                <span class="help-block text-danger" ng-show="!sentMessage.$pristine && sentMessage.mess.$error.required">Mensaje vacío</span>
+                            </div>
+                            <div class="col-lg-12 text-center">
+                                <p class="help-block text-danger" ng-show="errorMinimo">Error: No cumple con el mínimo de caracteres (6)</p>
+                            </div>
+                            <div class="col-lg-12 text-center">
+                                <button type="submit" class="btn btn-xl" ng-click="submitForm(formData)" ng-disabled="!sentMessage.$valid">Send Message</button>
+                            </div>
+                            
+                        
                     </form>
                 </div>
             </div>
