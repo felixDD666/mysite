@@ -1,21 +1,56 @@
 from django.contrib import admin
 
-from .models import Choice, Question
+from .models import Cliente, Cita, Categoria, Post
 from django.utils import timezone
 
-class ChoiceInline(admin.TabularInline):
-    model = Choice
-    extra = 3
 
-
-class QuestionAdmin(admin.ModelAdmin):
+class ClientesAdmin(admin.ModelAdmin):
     fieldsets = [
-        (None,               {'fields': ['question_text']}),
-        ('Date information', {'fields': ['pub_date'], 'classes': ['collapse']}),
+        (None,               {'fields': ['Nombre','DNI','Hist']}),
+        ('Date information', {'fields': ['Dia_registro'], 'classes': ['collapse']}),
     ]
-    inlines = [ChoiceInline]
-    list_display = ('question_text', 'pub_date')
-    list_filter = ['pub_date']
-    search_fields = ['question_text']
-    
-admin.site.register(Question, QuestionAdmin)
+    list_display = ('Nombre', 'DNI', 'Hist', 'Dia_registro')
+    list_filter = ['Dia_registro']
+    search_fields = ['Nombre']
+
+
+admin.site.register(Cliente, ClientesAdmin)
+
+
+class CitasAdmin(admin.ModelAdmin):
+	fieldsets = [
+		(None,               {'fields': ['Nombre','Cliente','Observaciones']}),
+		('Date information', {'fields': ['Dia'], 'classes': ['collapse']}),
+	]
+	list_display = ('Nombre', 'Cliente', 'Observaciones', 'Dia')
+	list_filter = ['Dia']
+	search_fields = ['Nombre']
+
+
+admin.site.register(Cita, CitasAdmin)  
+
+class CategoryAdmin(admin.ModelAdmin):
+	fieldsets = [
+		(None,               {'fields': ['name']}),
+		('Date information', {'fields': ['dateOfCreation'], 'classes': ['collapse']}),
+	]
+	list_display = ('name', 'dateOfCreation')
+	list_filter = ['dateOfCreation']
+	search_fields = ['name']
+
+admin.site.register(Categoria, CategoryAdmin)
+
+
+class PostsAdmin(admin.ModelAdmin):
+	fieldsets = [
+		(None,               {'fields': ['title','content','category']}),
+		('Date information', {'fields': ['creation_date'], 'classes': ['collapse']}),
+	]
+	list_display = ('title', 'content', 'creation_date' , 'category')
+	list_filter = ['creation_date']
+	search_fields = ['title']
+
+
+admin.site.register(Post, PostsAdmin)
+
+

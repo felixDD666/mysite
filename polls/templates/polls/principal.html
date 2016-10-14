@@ -338,6 +338,11 @@
     <!--servicios nuevo-->
     <section class="no-padding" id="portfolio">
         <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">SERVICIOS</h2>
+                    <h3 class="section-subheading text-muted">Esto es lo que puedo ofrecerte</h3>
+                </div>
             <div class="row no-gutter popup-gallery">
                 <div class="col-lg-4 col-sm-6">
                     <a href="servicio1" class="portfolio-box" >
@@ -436,13 +441,36 @@
     </section>
 
 
+    <section>
+        
+
+        <div class= "container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">BLOG</h2>
+                    <h3 class="section-subheading text-muted">Enterate de lo último</h3>
+                </div>
+            {% for post in posts %}
+            <div class = "row">
+                <div class = "col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <h1>{{ post.title }}</h1>
+                    <p>{{ post.content }}</p>
+                    <hr>
+                </div>
+            </div>  
+            {% endfor %}
+        </div>
+        
+
+       
+    </section>
+
    
 
 
 
-    <!-- Team Section -->
+    <!-- Team Section 
     <h2 class ="alertText">MAPITA 666 CON SITIOS INFERNALES</h2>
-    <h2 class ="alertText"></h2>
     <section id="blog" class="bg-light-gray">
         <div class="container">
             <div class="row">
@@ -505,6 +533,7 @@
             </div>
         </div>
     </section>
+    -->
 
     <!-- Clients Aside(por si acaso) -->
     <aside class="clients">

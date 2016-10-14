@@ -3,13 +3,15 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.views import generic
 
-from .models import Choice, Question
+from .models import Cliente, Cita, Categoria, Post
 from django.utils import timezone
 
-#PruebaBoot.
-def principal(request):
-    return render(request,'polls/principal.html',{})
 
+def principal(request):
+    posts = Post.objects.order_by("-creation_date")
+    return render(request,'polls/principal.html',{
+        "posts":posts,
+        })
 
 def formacionC(request):
     return render(request,'polls/formacionC.html',{})
@@ -32,14 +34,35 @@ def servicio5(request):
 def servicio6(request):
     return render(request,'polls/servicio6.html',{})
 
+def one_post(request, idpost):
+    posts = Post.objects.get(id=idpost)
+
+    return render_to_response(
+        "post.html",
+        {
+            "post":posts,
+        },
+    )
 
 
+def posts_by_category(request, idcategory):
+    category = Category.objects.get(id=idcategory)
+    posts = category.post_set.order_by("-creation_date")
+
+    return render_to_response(
+        "home.html",
+        {
+            "posts":posts,
+        },
+    )
+
+"""
 class IndexView(generic.ListView):
     template_name = 'polls/index.html'
     context_object_name = 'latest_question_list'
 
     def get_queryset(self):
-        """Return the last five published questions."""
+        
         return Question.objects.order_by('-pub_date')[:5]
 
 
@@ -69,3 +92,4 @@ def vote(request, question_id):
         # with POST data. This prevents data from being posted twice if a
         # user hits the Back button.
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
+        """
