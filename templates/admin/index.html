@@ -1,7 +1,15 @@
 {% extends "admin/base_site.html" %}
 {% load i18n static %}
 
-{% block extrastyle %}{{ block.super }}<link rel="stylesheet" type="text/css" href="{% static "admin/css/dashboard.css" %}" />{% endblock %}
+{% block extrastyle %}{{ block.super }}
+<link rel="stylesheet" type="text/css" href="{% static "admin/css/dashboard.css" %}" />
+
+{% endblock %}
+
+
+
+
+
 
 {% block coltype %}colMS{% endblock %}
 
@@ -18,14 +26,14 @@
             <!--Codigo para separar los apartados del ADMIN: GESTION-->
                 <div class="app-{{ app.app_label }} module">
                     <table>
-                        <caption>
+                        <caption class = "section_header">
                             <a href="{{ app.app_url }}" class="section" title="Opciones de Gestion de Clientes y Citas">GESTION</a>
                         </caption>
                         {% for model in app.models %}
                             {% if model.name == "Citas" or model.name == "Clientes" %}
                                 <tr class="model-{{ model.object_name|lower }}">
                                     {% if model.admin_url %}
-                                        <th scope="row"><a href="{{ model.admin_url }}">{{ model.name }}</a></th>
+                                        <th scope="row"><a class="modelNames" href="{{ model.admin_url }}">{{ model.name }}</a></th>
                                     {% else %}
                                         <th scope="row">{{ model.name }}</th>
                                     {% endif %}
@@ -49,14 +57,14 @@
                 <!--Codigo para separar los apartados del ADMIN: BLOG-->
                 <div class="app-{{ app.app_label }} module">
                     <table>
-                        <caption>
+                        <caption class = "section_header">
                             <a href="{{ app.app_url }}" class="section" title="Opciones Blog">BLOG</a>
                         </caption>
                         {% for model in app.models %}
                             {% if model.name == "Categorias" or model.name == "Posts" %}
                                 <tr class="model-{{ model.object_name|lower }}">
                                     {% if model.admin_url %}
-                                        <th scope="row"><a href="{{ model.admin_url }}">{{ model.name }}</a></th>
+                                        <th scope="row"><a class="modelNames" href="{{ model.admin_url }}">{{ model.name }}</a></th>
                                     {% else %}
                                         <th scope="row">{{ model.name }}</th>
                                     {% endif %}
@@ -80,14 +88,14 @@
             {% else %}
                 <div class="app-{{ app.app_label }} module">
                 <table>
-                <caption>
+                <caption class = "section_header">
                         <a href="{{ app.app_url }}" class="section" title="Generado Automatico">SuperUsers</a>
                 </caption>
                 {% for model in app.models %}
                     {% if model.name == "Users"%}
                         <tr class="model-{{ model.object_name|lower }}">
                     {% if model.admin_url %}
-                        <th scope="row"><a href="{{ model.admin_url }}">Usuarios</a></th>
+                        <th scope="row"><a class="modelNames" href="{{ model.admin_url }}">Usuarios</a></th>
                     {% else %}
                         <th scope="row">{{ model.name }}</th>
                     {% endif %}
@@ -123,8 +131,6 @@
 
 
 {% block sidebar %}
-<div id="content-related">
-    hola
-</div>
+
 {% endblock %}
 

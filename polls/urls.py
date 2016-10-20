@@ -12,6 +12,9 @@ urlpatterns = [
     url(r'^servicio4/$', views.servicio4, name='servicio4'),
     url(r'^servicio5/$', views.servicio5, name='servicio5'),
     url(r'^servicio6/$', views.servicio6, name='servicio6'),
+    url(r'^allPosts/$', views.homePosts, name='one_post'),
+    url(r'^(?P<idpost>[0-9]+)/$', views.one_post, name='one_post'),
+    url(r'^allPosts/(?P<idpost>[0-9]+)/$', views.one_post, name='one_post'),
 ]
 
     #url(r'^$', views.IndexView.as_view(), name='index'),

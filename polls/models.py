@@ -32,9 +32,15 @@ class Categoria(models.Model):
     name = models.CharField(max_length=200)
     dateOfCreation = models.DateTimeField('date')
 
+    def __str__(self):
+        return self.name
+
 class Post(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
     category = models.ForeignKey(Categoria)
     creation_date = models.DateTimeField('date')
+
+    def __str__(self):
+        return self.title
         

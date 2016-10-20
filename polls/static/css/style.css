@@ -1,13 +1,20 @@
 .headerVistas{
-  color: #00cde1;
+  color: #00a1c0;
 }
+/*
+#expli{
+  background-image: url('../polls/images/piesHappy.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+*/
 
 #contactHead{
-  color: #00cde1;
+  color: #00a1c0;
 }
 
 #contactSubHead{
-  color: #00cde1;
+  color: white!important;
 }
 
 .form-names{
@@ -35,8 +42,14 @@
 /*Redefinir para que las imagenes ocupen todo el circulo*/
 .img-circle{
   height: 100%;  
+  width: 100%;
 }
 /*CSS para las imagenes de los servicios*/
+
+.serviciosSection2{
+  margin: 120px;
+}
+
 #imgServ1{
   width: 650px;
   height: 350px;
@@ -68,21 +81,38 @@
 }
 /*^ CSS serv ^*/
 
+/*CSS para logos clientes*/
+#clients{
+  width: 1250px!important; 
+
+}
+
+#malagaLogo{
+  margin-top: 74px;
+  height: 100px;
+
+}
+
+#alvaroLogo{
+  padding-top: 26px;
+  height: 150px;
+}
 
 #cliniRincon{
-  padding-top: 45px;
+  padding-top: 20px;
+  height: 140px;
 }
 #ARlogo{
-  padding-top: 63px;
+  padding-top: 27px;
 }
 
 #victor{
-  height: 200px;
+  height: 150px;
   width: 300px;
 }
 
 #uma{
-  height: 200px;
+  height: 150px;
   width: 200px;
 }
 
@@ -95,7 +125,7 @@
 	color: red;
 }
 #icons{
-	color: #00cde1;
+	color: #00a1c0;
 }
 
 .portfolio-box {
@@ -105,10 +135,10 @@
   margin: 0 auto;
 }
 .portfolio-box .portfolio-box-caption {
-  color: black;
+  color: white;
   opacity: 0;
   display: block;
-  background: #00cde1;
+  background: #00a1c0;
   position: absolute;
   bottom: 0;
   text-align: center;
@@ -152,3 +182,37 @@
     font-size: 22px;
   }
 }
+
+
+
+/*CSS para admin*/
+
+#siteName{
+  color: black!important;
+  font-family:sans-serif;
+}
+#header{
+  background-color: #00c7dd!important;
+}
+.section{
+  color : black!important;
+  font-family:sans-serif;
+}
+.section_header{
+  background-color: #00c7dd!important;
+}
+
+#container {
+  background-image: url('../polls/images/logo2.jpg');
+  background-repeat: no-repeat; 
+  background-position: right top;
+  
+}
+/*
+#adminBody{
+  background-image: url('../polls/images/logo2.jpg');
+  background-repeat: no-repeat; 
+  
+  background-position: right top;
+}
+*/

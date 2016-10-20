@@ -9,8 +9,10 @@ from django.utils import timezone
 
 def principal(request):
     posts = Post.objects.order_by("-creation_date")
+    
     return render(request,'polls/principal.html',{
         "posts":posts,
+
         })
 
 def formacionC(request):
@@ -34,12 +36,19 @@ def servicio5(request):
 def servicio6(request):
     return render(request,'polls/servicio6.html',{})
 
+def homePosts(request):
+    posts = Post.objects.order_by("-creation_date")
+    categories = Categoria.objects.order_by("-dateOfCreation")
+    return render(request,'polls/homePosts.html',{
+            "posts":posts,
+            "categories":categories,
+        },
+    )
+
 def one_post(request, idpost):
     posts = Post.objects.get(id=idpost)
 
-    return render_to_response(
-        "post.html",
-        {
+    return render(request,'polls/post.html',{
             "post":posts,
         },
     )
