@@ -1,14 +1,28 @@
 .headerVistas{
   color: #00a1c0;
 }
+
+.imgMenu{
+  width: 50px;
+  height: 50px;
+}
 /*
 #expli{
   background-image: url('../polls/images/piesHappy.jpg');
+  background-size: 2115px 912px;
   background-repeat: no-repeat;
   background-position: center;
 }
-*/
 
+#overlayExpli{
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+*/
 #contactHead{
   color: #00a1c0;
 }
@@ -187,6 +201,8 @@
 
 /*CSS para admin*/
 
+
+/* Admin con fondo blanco y logo 2
 #siteName{
   color: black!important;
   font-family:sans-serif;
@@ -205,14 +221,130 @@
 #container {
   background-image: url('../polls/images/logo2.jpg');
   background-repeat: no-repeat; 
-  background-position: right top;
+  background-position: top right;
   
-}
-/*
-#adminBody{
-  background-image: url('../polls/images/logo2.jpg');
-  background-repeat: no-repeat; 
-  
-  background-position: right top;
 }
 */
+
+/*Admin con fondo azul y logo 3
+#siteName{
+  color: black!important;
+  font-family:sans-serif;
+}
+.breadcrumbs{
+  background-color: #00d1f1!important
+}
+#header{
+  background-color: #00d1f1!important;
+}
+.section{
+  color : white!important;
+  font-family:sans-serif;
+}
+.section_header{
+  background-color: black!important;
+}
+#adminBody{
+  background-image: url('../polls/images/logo3.jpg');
+  background-color: #00d1f1;
+  background-repeat: no-repeat; 
+  background-position: center;
+}
+#userAdmin{
+  color: black!important;
+}
+*/
+
+/*BATMAN Logo
+#siteName{
+  color: white!important;
+  font-family:sans-serif;
+}
+.breadcrumbs{
+  background-color: black!important
+}
+#filterStyle{
+  background-color: black;
+}
+#header{
+  background-color: black!important;
+}
+.section{
+  color : white!important;
+  font-family:sans-serif;
+}
+.section_header{
+  background-color: black!important;
+}
+#adminBody{
+  background-image: url('../polls/images/batman3.jpg');
+  background-repeat: no-repeat; 
+  background-position: top right ;
+}
+#userAdmin{
+  color: white!important;
+}
+*/
+/*BATMAN Nolan
+#siteName{
+  color: white!important;
+  font-family:sans-serif;
+}
+.breadcrumbs{
+  background-color: black!important
+}
+#filterStyle{
+  background-color: black;
+}
+#header{
+  background-color: black!important;
+}
+.section{
+  color : white!important;
+  font-family:sans-serif;
+}
+.section_header{
+  background-color: black!important;
+}
+#adminBody{
+  background-image: url('../polls/images/batman4.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-color: black; 
+  
+}
+#userAdmin{
+  color: white!important;
+}
+*/
+
+/*joker 1*/
+#siteName{
+  color: white!important;
+  font-family:sans-serif;
+}
+.breadcrumbs{
+  background-color: black!important
+}
+#filterStyle{
+  background-color: black;
+}
+#header{
+  background-color: black!important;
+}
+.section{
+  color : white!important;
+  font-family:sans-serif;
+}
+.section_header{
+  background-color: black!important;
+}
+#adminBody{
+  background-image: url('../polls/images/joker1.jpg');
+  background-repeat: no-repeat;
+  background-color: black;
+}
+#userAdmin{
+  color: white!important;
+}
+

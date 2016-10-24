@@ -14,6 +14,12 @@
             event.preventDefault();
         });
 
+
+        $('.bg').scroll(function() {
+            console.log("hola");
+            var x = $(this).scrollTop();
+            $(this).css('background-position', '0% ' + parseInt(-x / 10) + 'px');
+        });
         
         
         // Closes the Responsive Menu on Menu Item Click
