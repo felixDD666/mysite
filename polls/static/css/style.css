@@ -6,13 +6,15 @@
   width: 50px;
   height: 50px;
 }
-/*
+
 #expli{
-  background-image: url('../polls/images/piesHappy.jpg');
-  background-size: 2115px 912px;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: rgba(49,112,143,0.15);
 }
+
+.serviciosSection2{
+  background-color: rgba(49,112,143,0.15);
+}
+/*
 
 #overlayExpli{
   height: 100%;
@@ -23,9 +25,7 @@
   left: 0;
 }
 */
-#contactHead{
-  color: #00a1c0;
-}
+
 
 #contactSubHead{
   color: white!important;
@@ -60,9 +60,6 @@
 }
 /*CSS para las imagenes de los servicios*/
 
-.serviciosSection2{
-  margin: 120px;
-}
 
 #imgServ1{
   width: 650px;
@@ -138,9 +135,7 @@
 .alertText{
 	color: red;
 }
-#icons{
-	color: #00a1c0;
-}
+
 
 .portfolio-box {
   position: relative;
@@ -197,6 +192,65 @@
   }
 }
 
+/*CSS para blog*/
+.lineaDiv{
+  background-color: #00a1c0;
+  color: white;
+  height: 3.5px;
+}
+#categoryTitle{
+  background-color: #00a1c0!important;
+  color: white;
+}
+
+/*CSS para contacta*/
+#iconContact{
+  margin-top: 20px;
+}
+#contacHeadText{
+  color: white!important;
+}
+#contactSubText{
+  color: white;
+}
+#BodyContacta{
+  background-image: url('../polls/images/joker1.jpg');
+}
+/*Resaltar los iconos que sean botones*/
+#iconContact:hover {
+ background-color: #00a1c0;
+ color: #3a7999;
+ border: dashed;
+ border-color: white;
+}
+
+/*CSS iconos*/
+#icons{
+  color: #00a1c0;
+}
+#iconsShape:hover{
+  color: black;
+}
+
+/*Guardar para boton con icono
+#buttonContacta {
+ padding: 10px 35px;
+ overflow:hidden;
+}
+#buttonContacta:before {
+ font-family: FontAwesome;
+ content:"\f07a";
+ position: absolute;
+ top: 11px;
+ left: -30px;
+ transition: all 200ms ease;
+}
+#buttonContacta:hover {
+ left: 7px;
+}
+*/
+
+
 
 
 /*CSS para admin*/
@@ -226,7 +280,7 @@
 }
 */
 
-/*Admin con fondo azul y logo 3
+/*Admin con fondo azul y logo 3*/
 #siteName{
   color: black!important;
   font-family:sans-serif;
@@ -248,12 +302,12 @@
   background-image: url('../polls/images/logo3.jpg');
   background-color: #00d1f1;
   background-repeat: no-repeat; 
-  background-position: center;
+  background-position: right center;
 }
 #userAdmin{
   color: black!important;
 }
-*/
+
 
 /*BATMAN Logo
 #siteName{
@@ -284,7 +338,7 @@
 #userAdmin{
   color: white!important;
 }
-*/
+
 /*BATMAN Nolan
 #siteName{
   color: white!important;
@@ -318,7 +372,7 @@
 }
 */
 
-/*joker 1*/
+/*joker 1
 #siteName{
   color: white!important;
   font-family:sans-serif;
@@ -347,4 +401,4 @@
 #userAdmin{
   color: white!important;
 }
-
+*/

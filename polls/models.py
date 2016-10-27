@@ -43,4 +43,13 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
         
+class Mensaje(models.Model):
+    nombre = models.CharField(max_length=200)
+    email = models.CharField(max_length=200)
+    telefono = models.CharField(max_length=200)
+    mensaje = models.TextField();
+
+    def __str__(self):
+        return self.nombre

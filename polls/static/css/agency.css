@@ -558,8 +558,8 @@ aside.clients img {
   margin: 50px auto;
 }
 section#contact {
-  background-color: #222222;
-  background-image: url('../polls/images/map-image.png');
+  background-color: black;
+  padding: 90px;
   background-position: center;
   background-repeat: no-repeat;
 }

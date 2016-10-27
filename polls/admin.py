@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Cliente, Cita, Categoria, Post
+from .models import *
 from django.utils import timezone
 
 
@@ -53,4 +53,14 @@ class PostsAdmin(admin.ModelAdmin):
 
 admin.site.register(Post, PostsAdmin)
 
+class MensajesAdmin(admin.ModelAdmin):
+	fieldsets = [
+		(None,               {'fields': ['nombre','email','telefono','mensaje']}),
+		
+	]
+	list_display = ('nombre', 'email', 'telefono' , 'mensaje')
+	
+	search_fields = ['nombre']
 
+
+admin.site.register(Mensaje, MensajesAdmin)

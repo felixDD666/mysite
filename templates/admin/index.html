@@ -30,7 +30,7 @@
                             <a href="{{ app.app_url }}" class="section" title="Opciones de Gestion de Clientes y Citas">GESTION</a>
                         </caption>
                         {% for model in app.models %}
-                            {% if model.name == "Citas" or model.name == "Clientes" %}
+                            {% if model.name == "Citas" or model.name == "Clientes" or model.name == "Mensajes"%}
                                 <tr class="model-{{ model.object_name|lower }}">
                                     {% if model.admin_url %}
                                         <th scope="row"><a class="modelNames" href="{{ model.admin_url }}">{{ model.name }}</a></th>
@@ -86,6 +86,7 @@
                     </table>    
                 </div>
             {% else %}
+                <!--Codigo para separar los apartados del ADMIN: SUPERUSERS-->
                 <div class="app-{{ app.app_label }} module">
                 <table>
                 <caption class = "section_header">

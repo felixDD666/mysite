@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<!-- css -->
+    <link href="../../../static/css/bootstrap.css" rel="stylesheet">
+    <link href="../../../static/css/style.css" rel="stylesheet" media="screen">
+    <link href="../../../static/css/agency.css" rel="stylesheet">
+    <!--font awesome(iconos y  tal)-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <!--Sin uso por el momento   -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!--angularJS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.1/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.1/angular-route.js"></script>
+
+    
+    <!--JavaScript-->
+    <script type="text/javascript" src="../../../static/js/principal.js"></script>
+    
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+	</head>
+	<body id="BodyContacta">
+        <!--
+	<form method="post">
+	    {% csrf_token %}
+	    {{ form.as_p }}
+	    <div class="form-actions">
+	      <button type="submit">Send</button>
+	    </div>
+	</form>
+    -->
+	<div class="container" ng-controller = "Controlador">
+            <div class="row" id="contacHead">
+                <div class="col-lg-12 text-center">
+                    <h2 id="contacHead" class="section-heading">Rellena este sencillo formulario y te contestaré cuanto antes</h2>
+                    <br><br><br>
+                </div>
+            </div>
+            <div class="row" >
+                <div class="col-lg-12" >
+                    <form method="post" name="sentMessage" id="contactForm">
+                            {% csrf_token %}
+                            <div class="col-md-6">
+                                <div class="form-group" >
+                                    Nombre: {{form.nombre}}
+                                </div>
+                                <div class="form-group">
+                                    Email: {{form.email}}
+                                </div>
+                                <div class="form-group">
+                                    Telefono: {{form.telefono}}
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    Mensaje: {{form.mensaje}}
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                              <button type="submit">Send</button>
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+	</body>
+</html>

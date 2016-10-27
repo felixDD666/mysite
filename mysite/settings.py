@@ -80,14 +80,15 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'felixDD666$myDataB',
-        'USER': 'felixDD666',
-        'PASSWORD': 'sefirot666+-',
-        'HOST': 'felixDD666.mysql.pythonanywhere-services.com',
+        'ENGINE': 'django.db.backends.mysql', 
+        'NAME': 'myDataB',
+        'USER': 'root',
+        'PASSWORD': 'sefirot666',
+        'HOST': 'localhost',
         'PORT': '3306',
     }
 }
+
 
 
 # Password validation
@@ -107,6 +108,14 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+#Email Data
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = '951753.durex@gmail.com'
+EMAIL_HOST_PASSWORD = 'Copazo951753+'
+EMAIL_PORT = 587
 
 
 # Internationalization
@@ -131,12 +140,8 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = "/var/www/statics"
 
-
+STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    # Put strings here, like "/home/html/static" or "C:/www/django/static".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
     os.path.join(BASE_DIR,'polls/static'),
-    
 )

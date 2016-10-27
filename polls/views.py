@@ -1,18 +1,22 @@
-from django.shortcuts import get_object_or_404, render
-from django.http import HttpResponseRedirect
+from django.shortcuts import get_object_or_404, render, redirect
+from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 from django.views import generic
-
+#EMAILS
+from django.core.mail import send_mail
+from .forms import ContactForm
 from .models import Cliente, Cita, Categoria, Post
+
+
 from django.utils import timezone
 
 
 def principal(request):
     posts = Post.objects.order_by("-creation_date")
-    
+    numPost = Post.objects.count()-3;
     return render(request,'polls/principal.html',{
         "posts":posts,
-
+        "numPost": numPost
         })
 
 def formacionC(request):
@@ -64,6 +68,26 @@ def posts_by_category(request, idcategory):
             "posts":posts,
         },
     )
+
+def contacta(request):
+    if request.method == 'GET':
+        form = ContactForm()
+    else:
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            nombre = form.cleaned_data['nombre']
+            email = form.cleaned_data['email']
+            telefono = form.cleaned_data['telefono']
+            mensaje = form.cleaned_data['mensaje']
+            try:
+                send_mail("Nuevo mensaje de:" + nombre, "Email: " + email + "\ntelefono: " + telefono + "\nContenido: " + mensaje , "951753.durex@gmail.com", ['alvaro.delpino21@gmail.com '])
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+            return redirect('thanks')
+    return render(request, "polls/contacta.html", {'form': form})
+def thanks(request):
+    return HttpResponse('Thank you for your message.')
+
 
 """
 class IndexView(generic.ListView):
