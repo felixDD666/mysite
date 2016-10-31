@@ -27,9 +27,7 @@
 */
 
 
-#contactSubHead{
-  color: white!important;
-}
+
 
 .form-names{
 	padding: 3px;
@@ -59,8 +57,6 @@
   width: 100%;
 }
 /*CSS para las imagenes de los servicios*/
-
-
 #imgServ1{
   width: 650px;
   height: 350px;
@@ -136,7 +132,7 @@
 	color: red;
 }
 
-
+/*CSS para los servicios*/
 .portfolio-box {
   position: relative;
   display: block;
@@ -213,8 +209,48 @@
 #contactSubText{
   color: white;
 }
+.textContact{
+  color: white;
+}
+#id_nombre{
+  color: white;
+  background-color: rgba(49,112,143,0.4);
+}
+#id_email{
+  color: white;
+  background-color: rgba(49,112,143,0.4);
+}
+#id_telefono{
+  color: white;
+  background-color: rgba(49,112,143,0.4);
+}
+#id_mensaje{
+  color: white;
+  background-color: rgba(49,112,143,0.4);
+}
+
+#contactContainer{
+  margin-top: 150px;
+}
+
 #BodyContacta{
-  background-image: url('../polls/images/joker1.jpg');
+  background-image: url('../polls/images/map-image.png');
+  background-color: black;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+#mainNavContact{
+  background-color: white;
+}
+#textNavContact{
+  color: black;
+}
+#contactSubmitMessage{
+  margin-top: 50px;
+  display: none;
+}
+#submitMessage{
+  color: #00a1c0;
 }
 /*Resaltar los iconos que sean botones*/
 #iconContact:hover {

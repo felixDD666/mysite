@@ -28,48 +28,75 @@
 
 	</head>
 	<body id="BodyContacta">
-        <!--
-	<form method="post">
-	    {% csrf_token %}
-	    {{ form.as_p }}
-	    <div class="form-actions">
-	      <button type="submit">Send</button>
-	    </div>
-	</form>
-    -->
-	<div class="container" ng-controller = "Controlador">
+
+        <nav id="mainNavContact" class="navbar navbar-default navbar-custom navbar-fixed-top affix">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                    </button>
+                    <a id="textNavContact" class="navbar-brand page-scroll" href="">Alvaro Gómez - Podólogo</a>
+
+                </div>
+            
+                
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="hidden">
+                            <a href=""></a>
+                        
+                        <li>
+                            <a id="textNavContact" class="page-scroll" href="">contacta</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+
+	<div id="contactContainer" class="container" ng-controller = "Controlador">
             <div class="row" id="contacHead">
                 <div class="col-lg-12 text-center">
-                    <h2 id="contacHead" class="section-heading">Rellena este sencillo formulario y te contestaré cuanto antes</h2>
+                    <h2 id="contacHeadText" class="section-heading">Rellena este sencillo formulario y te contestaré cuanto antes</h2>
                     <br><br><br>
                 </div>
             </div>
-            <div class="row" >
-                <div class="col-lg-12" >
-                    <form method="post" name="sentMessage" id="contactForm">
-                            {% csrf_token %}
-                            <div class="col-md-6">
+                <form method="post" name="sentMessage" id="contactForm">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-md-4 text-center">
                                 <div class="form-group" >
-                                    Nombre: {{form.nombre}}
-                                </div>
-                                <div class="form-group">
-                                    Email: {{form.email}}
-                                </div>
-                                <div class="form-group">
-                                    Telefono: {{form.telefono}}
+                                    <h3 class="textContact">Nombre:</h3>{{form.nombre}}
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-4 text-center">
                                 <div class="form-group">
-                                    Mensaje: {{form.mensaje}}
+                                    <h3 class="textContact">Email:</h3> {{form.email}}
                                 </div>
                             </div>
+                            <div class="col-md-4 text-center">
+                                <div class="form-group">
+                                    <h3 class="textContact">Telefono:</h3> {{form.telefono}}
+                                </div>
+                            </div>
+                        </div>
+                        <br><br><br>
+                        <div class="row">
+                        <div class="col-md-12 text-center">
+                            <div class="form-group">
+                                <h3 class="textContact">Mensaje:</h3> {{form.mensaje}}
+                            </div>
+                        </div>
+                        </div>
+                        <div class="row text-center">
                             <div class="form-actions">
-                              <button type="submit">Send</button>
+                              <button id="contactSubmit" class="btn btn-primary" type="submit">Enviar</button>
                             </div>
-                    </form>
-                </div>
-            </div>
+                        </div>
+                </form>
         </div>
 	</body>
 </html>

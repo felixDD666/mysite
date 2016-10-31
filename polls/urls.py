@@ -16,7 +16,6 @@ urlpatterns = [
     url(r'^(?P<idpost>[0-9]+)/$', views.one_post, name='one_post'),
     url(r'^allPosts/(?P<idpost>[0-9]+)/$', views.one_post, name='one_post'),
     url(r'^contacta/$',views.contacta,name='contacta'),
-    url(r'^thanks/$',views.thanks,name='thanks'),
 ]
 
     #url(r'^$', views.IndexView.as_view(), name='index'),

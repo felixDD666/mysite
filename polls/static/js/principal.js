@@ -1,31 +1,6 @@
 
- 
+    var app = angular.module('app',[]);
 
-    //funcion para minimo de caracteres;
-    var app = angular.module('app',[])
-
-
-    var func2 = function($scope) {
-
-            
-        
-
-            /*
-        $('.bg').scroll(function() {
-            console.log("hola");
-            var x = $(this).scrollTop();
-            $(this).css('background-position', '0% ' + parseInt(-x / 10) + 'px');
-        });
-        */
-        
-        // Closes the Responsive Menu on Menu Item Click
-        
-
-        
-            
-    }
-
-    app.controller("Controlador", func2)
 
     var func3 = function ($scope) {
         //// jQuery para el scroll suave del menu
@@ -54,9 +29,39 @@
             }
         });
     }
-    app.controller("Controlador2", func3)
+    app.controller("Controlador2", func3);
+
+/*
+
+    var contactMessage= function ($scope) {
+        console.log("aqui estamos")
+        var f = document.forms["sentMessage"].elements;
+        var cansubmit = true;
+        $("#id_mensaje").on("keyup",function(){
+            if (cansubmit) {
+                $('#contactSubmit').removeAttr('disabled');
+            }
+        });
+        $("#id_mensaje").on("keyup",function(){
+            for (var i = 0; i < f.length; i++) {
+                console.log(f[i]);
+                if (f[i].value.length == 0) cansubmit = false;
+            }
+            if (cansubmit) {
+                $('#contactSubmit').removeAttr('disabled');
+            }
+        });
+        $('#contactSubmit').click(function(){ 
+            $('#contactSubmitMessage').css("display","block");
+        });
+    }
+
+    app.controller("Controlador", contactMessage);
+
+*/
 
 
+/*
     var formFunc= function ($scope) {
         $scope.formData = {};
 
@@ -69,7 +74,4 @@
     app.controller("Controlador3" ,  formFunc);
 
 
-
-
-
-
+*/
