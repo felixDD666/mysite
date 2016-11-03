@@ -80,13 +80,14 @@ def contacta(request):
             telefono = form.cleaned_data['telefono']
             mensaje = form.cleaned_data['mensaje']
             try:
-                print("mandando")
                 send_mail("Nuevo mensaje de:" + nombre, "Email: " + email + "\n\nTelefono: " + telefono + "\n\nContenido: " + mensaje , 'podoAlvaro@gmail.com', ['agpodologia@gmail.com'])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
+            return HttpResponseRedirect("thanks")
     return render(request, "polls/contacta.html", {'form': form})
 
-
+def thanks(request):
+    return render(request,'polls/thanks.html',{})
 
 """
 class IndexView(generic.ListView):

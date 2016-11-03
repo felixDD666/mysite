@@ -4,6 +4,7 @@
 
     var func3 = function ($scope) {
         //// jQuery para el scroll suave del menu
+        
         $('a.page-scroll').bind('click', function(event) {
             var $anchor = $(this);
             $('html, body').stop().animate({
@@ -31,10 +32,11 @@
     }
     app.controller("Controlador2", func3);
 
-/*
 
+
+/*
     var contactMessage= function ($scope) {
-        console.log("aqui estamos")
+        console.log("aqui estamos");
         var f = document.forms["sentMessage"].elements;
         var cansubmit = true;
         $("#id_mensaje").on("keyup",function(){
@@ -56,9 +58,9 @@
         });
     }
 
-    app.controller("Controlador", contactMessage);
+    app.controller("Controlador1", contactMessage);
+/*
 
-*/
 
 
 /*
