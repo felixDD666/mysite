@@ -17,17 +17,10 @@
 .serviciosSection2{
   background-color: rgba(49,112,143,0.15);
 }
-/*
-
-#overlayExpli{
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0,0,0,.5);
-  position: absolute;
-  top: 0;
-  left: 0;
+#fotoAlvaro{
+  margin-top: 10px;
 }
-*/
+
 
 
 
@@ -51,15 +44,16 @@
 .warning {
   border-color: yellow;
 }
- 
-
-
 /*Redefinir para que las imagenes ocupen todo el circulo*/
 .img-circle{
   height: 100%;  
   width: 100%;
 }
 /*CSS para las imagenes de los servicios*/
+#serviciosFoto{
+  padding-left: 0px;
+  padding-right: 0px;
+}
 #imgServ1{
   width: 650px;
   height: 350px;
@@ -218,14 +212,20 @@
 #id_nombre{
   color: white;
   background-color: rgba(49,112,143,0.4);
+  width: 170px;
+  height: 28px;
 }
 #id_email{
   color: white;
   background-color: rgba(49,112,143,0.4);
+  width: 170px;
+  height: 28px;
 }
 #id_telefono{
   color: white;
   background-color: rgba(49,112,143,0.4);
+  width: 170px;
+  height: 28px;
 }
 #id_mensaje{
   color: white;
@@ -282,8 +282,14 @@
 }
 /*CSS para interior de los servicios*/
 #buttonServViews{
-      padding-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }  
+
+.textoServicios{
+  color: black;
+  font-size: 130%;
+}
 
 /*Guardar para boton con icono
 #buttonContacta {
@@ -350,6 +356,7 @@
 }
 .section_header{
   background-color: black!important;
+  width: 835px;
 }
 #adminBody{
   background-image: url('../polls/images/logo3.jpg');
@@ -360,6 +367,10 @@
 #userAdmin{
   color: black!important;
 }
+tbody{
+  background-color: white;
+}
+
 
 
 /*BATMAN Logo
@@ -456,12 +467,21 @@
 }
 */
 /*CSS tabla de formacion complementaria*/
-#headerTablaFormacion{
+#headerTablaFormacion1{
+  color: #00a1c0;
+  width: 700px;
+}
+#headerTablaFormacion2{
+  color: #00a1c0;
+  width: 170px;
+}
+#headerTablaFormacion3{
   color: #00a1c0;
 }
 .divTable{
   display: table;
   width: 100%;
+  margin-bottom: 10px;
 }
 .divTableRow {
   display: table-row;
@@ -474,6 +494,8 @@
   border: 1px solid #999999;
   display: table-cell;
   padding: 3px 10px;
+  vertical-align: middle;
+  height: 48px;
 }
 .divTableHeading {
   background-color: #EEE;

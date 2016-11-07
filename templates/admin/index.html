@@ -23,7 +23,6 @@
     {% if app_list %}
         {% for app in app_list %}
             {% if app.name == "Polls" %}
-            <h1>{% firstof user.get_short_name user.get_username %}</h1>
             <!--Codigo para separar los apartados del ADMIN: GESTION-->
                 <div class="app-{{ app.app_label }} module">
                     <table>
@@ -133,6 +132,11 @@
 
 
 {% block sidebar %}
-<iframe src="https://calendar.google.com/calendar/embed?src=felixdurandom%40gmail.com&ctz=Africa/Ceuta" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+{%if user.get_username == "fdd"%}
+<iframe src="https://calendar.google.com/calendar/embed?src=felixdurandom%40gmail.com&ctz=Africa/Ceuta" style="border: 0" width="850" height="600" frameborder="0" scrolling="no"></iframe>
+{%endif%}
+{%if user.get_username == "alvaroG"%}
+<iframe src="https://calendar.google.com/calendar/embed?showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%2333ccff&amp;src=alvaro.delpino21%40gmail.com&amp;color=%2329527A&amp;ctz=Europe%2FMadrid" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+{%endif%}
 {% endblock %}
 

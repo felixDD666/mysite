@@ -25,6 +25,8 @@
         <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
 
+
+
         <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top affix">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -60,17 +62,20 @@
             <div class="row">
                 {% for category in categories %}
                     <h1 id="categoryTitle" class="text-center">{{category.name}}</h1>
-                    {% for post in category.post_set.all %}
+                    {% for post in category.post_set.all reversed %}
                     <div class="row">
                         <div class = "col-lg-8 col-md-10">
-                            <a href="{{post.id}}"><h2>{{ post.title }}</h2></a>
-                            <p>{{ post.content }}</p>
+                            <a href="{{post.id}}"><h2>{{ post.Titulo }}</h2></a>
+                            <br>
+                            <h5>Creado el: {{post.Fecha_Creacion}}</h5>
+                            <br>
+                            <p>{{ post.Contenido }}</p>
                         </div>
                         <div class= "col-lg-2 col-md-1">
                             <a href="{{post.id}}">
                                 <span class="fa-stack fa-4x">
                                     <i id="icons" class="fa fa-circle fa-stack-2x text-primary"></i>
-                                    <i class="fa fa-share fa-stack-1x fa-inverse"></i>
+                                    <i id="iconsShape" class="fa fa-share fa-stack-1x fa-inverse"></i>
                                 </span>
                             </a>
                         </div>

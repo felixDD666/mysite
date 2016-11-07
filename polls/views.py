@@ -12,7 +12,7 @@ from django.utils import timezone
 
 
 def principal(request):
-    posts = Post.objects.order_by("-creation_date")
+    posts = Post.objects.order_by("-Fecha_Creacion")
     numPost = Post.objects.count()-3;
     return render(request,'polls/principal.html',{
         "posts":posts,
@@ -41,7 +41,7 @@ def servicio6(request):
     return render(request,'polls/servicio6.html',{})
 
 def homePosts(request):
-    posts = Post.objects.order_by("-creation_date")
+    posts = Post.objects.order_by("-Fecha_Creacion")
     categories = Categoria.objects.order_by("-dateOfCreation")
     return render(request,'polls/homePosts.html',{
             "posts":posts,
@@ -60,7 +60,7 @@ def one_post(request, idpost):
 
 def posts_by_category(request, idcategory):
     category = Category.objects.get(id=idcategory)
-    posts = category.post_set.order_by("-creation_date")
+    posts = category.post_set.order_by("-Fecha_Creacion")
 
     return render_to_response(
         "home.html",
@@ -80,7 +80,7 @@ def contacta(request):
             telefono = form.cleaned_data['telefono']
             mensaje = form.cleaned_data['mensaje']
             try:
-                send_mail("Nuevo mensaje de:" + nombre, "Email: " + email + "\n\nTelefono: " + telefono + "\n\nContenido: " + mensaje , 'podoAlvaro@gmail.com', ['agpodologia@gmail.com'])
+                send_mail("Nuevo mensaje de " + nombre, "Email: " + email + "\n\nTelefono: " + telefono + "\n\nContenido: " + mensaje , 'podoAlvaro@gmail.com', ['agpodologia@gmail.com'])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return HttpResponseRedirect("thanks")

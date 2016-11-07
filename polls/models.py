@@ -36,13 +36,25 @@ class Categoria(models.Model):
         return self.name
 
 class Post(models.Model):
-    title = models.CharField(max_length=200)
-    content = models.TextField()
-    category = models.ForeignKey(Categoria)
-    creation_date = models.DateTimeField('date')
+    Titulo = models.CharField(max_length=200)
+    Contenido = models.TextField()
+    Categoria = models.ForeignKey(Categoria)
+    Fecha_Creacion = models.DateTimeField('date')
+    PUBLICO = 'pub'
+    PRIVADO = 'pri'
+    pORp_choices = (
+        (PUBLICO, 'publico'),
+        (PRIVADO, 'privado'),
+    )
+    Publico_Privado = models.CharField(
+        max_length=3,
+        choices=pORp_choices,
+        default=PUBLICO,
+    )
 
+    Foto = models.ImageField(upload_to='postPhotos', default = 'SOMETHING')
     def __str__(self):
-        return self.title
+        return self.Titulo
 
         
 class Mensaje(models.Model):

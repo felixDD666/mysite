@@ -7,7 +7,7 @@ from django.utils import timezone
 class ClientesAdmin(admin.ModelAdmin):
     fieldsets = [
         (None,               {'fields': ['Nombre','DNI','Hist']}),
-        ('Date information', {'fields': ['Dia_registro'], 'classes': ['collapse']}),
+        ('Date information', {'fields': ['Dia_registro']}),
     ]
     list_display = ('Nombre', 'DNI', 'Hist', 'Dia_registro')
     list_filter = ['Dia_registro']
@@ -20,7 +20,7 @@ admin.site.register(Cliente, ClientesAdmin)
 class CitasAdmin(admin.ModelAdmin):
 	fieldsets = [
 		(None,               {'fields': ['Nombre','Cliente','Observaciones']}),
-		('Date information', {'fields': ['Dia'], 'classes': ['collapse']}),
+		('Date information', {'fields': ['Dia']}),
 	]
 	list_display = ('Nombre', 'Cliente', 'Observaciones', 'Dia')
 	list_filter = ['Dia']
@@ -32,7 +32,7 @@ admin.site.register(Cita, CitasAdmin)
 class CategoryAdmin(admin.ModelAdmin):
 	fieldsets = [
 		(None,               {'fields': ['name']}),
-		('Date information', {'fields': ['dateOfCreation'], 'classes': ['collapse']}),
+		('Date information', {'fields': ['dateOfCreation']}),
 	]
 	list_display = ('name', 'dateOfCreation')
 	list_filter = ['dateOfCreation']
@@ -43,19 +43,19 @@ admin.site.register(Categoria, CategoryAdmin)
 
 class PostsAdmin(admin.ModelAdmin):
 	fieldsets = [
-		(None,               {'fields': ['title','content','category']}),
-		('Date information', {'fields': ['creation_date'], 'classes': ['collapse']}),
+		(None,               {'fields': ['Titulo','Contenido','Categoria','Publico_Privado','Foto']}),
+		('Date information', {'fields': ['Fecha_Creacion']}),
 	]
-	list_display = ('title', 'content', 'creation_date' , 'category')
-	list_filter = ['creation_date']
-	search_fields = ['title']
+	list_display = ('Titulo', 'Contenido', 'Fecha_Creacion' , 'Categoria','Foto')
+	list_filter = ['Fecha_Creacion']
+	search_fields = ['Titulo']
 
 
 admin.site.register(Post, PostsAdmin)
 
 class MensajesAdmin(admin.ModelAdmin):
 	fieldsets = [
-		(None,               {'fields': ['nombre','email','telefono','mensaje']}),
+		(None,{'fields': ['nombre','email','telefono','mensaje']}),
 		
 	]
 	list_display = ('nombre', 'email', 'telefono' , 'mensaje')

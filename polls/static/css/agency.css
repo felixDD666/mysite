@@ -382,9 +382,9 @@ section h3.section-subheading {
   position: absolute;
   content: "";
   width: 2px;
-  background-color: #f1f1f1;
+  background-color: #bcbcbc;
   left: 40px;
-  margin-left: -1.5px;
+  margin-left: 12.5px;
 }
 .timeline > li {
   margin-bottom: 50px;
