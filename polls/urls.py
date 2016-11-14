@@ -17,6 +17,9 @@ urlpatterns = [
     url(r'^allPosts/(?P<idpost>[0-9]+)/$', views.one_post, name='one_post'),
     url(r'^contacta/$',views.contacta,name='contacta'),
     url(r'^contacta/thanks/$',views.thanks,name='thanks'),
+    url(r'^admin/EventosCalendar/$',views.EventosCalendar,name='EventosCalendar'),
+
+    #url(r'', include('social_auth.urls')),
 ]
 
     #url(r'^$', views.IndexView.as_view(), name='index'),

@@ -6,8 +6,15 @@ from django.utils import timezone
 
 class Cliente(models.Model):
     Nombre = models.CharField(max_length=200)
-    DNI = models.CharField(max_length=200)
-    Hist = models.TextField()
+    Apellido1 = models.CharField(max_length=200)
+    Apellido2 = models.CharField(max_length=200)
+    Telefono = models.CharField(max_length=200)
+    Email = models.EmailField(max_length=200)
+    Domicilio = models.CharField(max_length=200)
+    Fecha_Nacimiento = models.CharField(max_length=200)
+    Antecedentes_Personales = models.TextField()
+    Antecedentes_Familiares = models.TextField()
+    Historia_Clinica = models.TextField()
     Dia_registro = models.DateTimeField('date published')
     def __str__(self):
         return self.Nombre
@@ -15,17 +22,19 @@ class Cliente(models.Model):
     def was_published_recently(self):
         return self.Dia_registro >= timezone.now() - datetime.timedelta(days=1)
 
-class Cita(models.Model):
-	Nombre = models.CharField(max_length=200)
-	Cliente = models.CharField(max_length=200)
-	Observaciones = models.TextField()
-	Dia = models.DateTimeField('date')
+class Visita(models.Model):
+    Cliente = models.CharField(max_length=200)
+    Apellido1 = models.CharField(max_length=200)
+    Apellido2 = models.CharField(max_length=200)
+    Diagnostico = models.TextField()
+    Tratamiento = models.TextField()
+    Observaciones = models.TextField()
+    Dia = models.DateTimeField('date') 
+    def __str__(self):
+        return self.Cliente
 
-	def __str__(self):
-		return self.Nombre
-
-	def was_published_recently(self):
-		return self.Dia_registro >= timezone.now() - datetime.timedelta(days=1)
+    def was_published_recently(self):
+        return self.Dia_registro >= timezone.now() - datetime.timedelta(days=1)
 
 
 class Categoria(models.Model):
@@ -51,7 +60,6 @@ class Post(models.Model):
         choices=pORp_choices,
         default=PUBLICO,
     )
-
     Foto = models.ImageField(upload_to='postPhotos', default = 'SOMETHING')
     def __str__(self):
         return self.Titulo

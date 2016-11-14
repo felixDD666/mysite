@@ -6,10 +6,10 @@ from django.utils import timezone
 
 class ClientesAdmin(admin.ModelAdmin):
     fieldsets = [
-        (None,               {'fields': ['Nombre','DNI','Hist']}),
-        ('Date information', {'fields': ['Dia_registro']}),
+        (None,               {'fields': ['Nombre','Apellido1','Apellido2','Telefono','Email','Domicilio','Fecha_Nacimiento','Antecedentes_Personales','Antecedentes_Familiares','Historia_Clinica']}),
+        ('Fecha de Creacion', {'fields': ['Dia_registro']}),
     ]
-    list_display = ('Nombre', 'DNI', 'Hist', 'Dia_registro')
+    list_display = ('Nombre','Apellido1','Apellido2','Telefono','Email','Domicilio','Fecha_Nacimiento','Antecedentes_Personales','Antecedentes_Familiares','Historia_Clinica', 'Dia_registro')
     list_filter = ['Dia_registro']
     search_fields = ['Nombre']
 
@@ -17,17 +17,17 @@ class ClientesAdmin(admin.ModelAdmin):
 admin.site.register(Cliente, ClientesAdmin)
 
 
-class CitasAdmin(admin.ModelAdmin):
+class VisitasAdmin(admin.ModelAdmin):
 	fieldsets = [
-		(None,               {'fields': ['Nombre','Cliente','Observaciones']}),
+		(None,               {'fields': ['Cliente','Apellido1','Apellido2','Diagnostico','Tratamiento','Observaciones']}),
 		('Date information', {'fields': ['Dia']}),
 	]
-	list_display = ('Nombre', 'Cliente', 'Observaciones', 'Dia')
+	list_display = ('Cliente','Apellido1','Apellido2','Diagnostico','Tratamiento', 'Observaciones', 'Dia')
 	list_filter = ['Dia']
-	search_fields = ['Nombre']
+	search_fields = ['Cliente','Apellido1','Apellido2']
 
 
-admin.site.register(Cita, CitasAdmin)  
+admin.site.register(Visita, VisitasAdmin)  
 
 class CategoryAdmin(admin.ModelAdmin):
 	fieldsets = [

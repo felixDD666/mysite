@@ -30,7 +30,7 @@
                             <a href="{{ app.app_url }}" class="section" title="Opciones de Gestion de Clientes y Citas">GESTION</a>
                         </caption>
                         {% for model in app.models %}
-                            {% if model.name == "Citas" or model.name == "Clientes" or model.name == "Mensajes"%}
+                            {% if model.name == "Visitas" or model.name == "Clientes" or model.name == "Mensajes"%}
                                 <tr class="model-{{ model.object_name|lower }}">
                                     {% if model.admin_url %}
                                         <th scope="row"><a class="modelNames" href="{{ model.admin_url }}">{{ model.name }}</a></th>
@@ -132,11 +132,13 @@
 
 
 {% block sidebar %}
-{%if user.get_username == "fdd"%}
-<iframe src="https://calendar.google.com/calendar/embed?src=felixdurandom%40gmail.com&ctz=Africa/Ceuta" style="border: 0" width="850" height="600" frameborder="0" scrolling="no"></iframe>
-{%endif%}
-{%if user.get_username == "alvaroG"%}
-<iframe src="https://calendar.google.com/calendar/embed?showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%2333ccff&amp;src=alvaro.delpino21%40gmail.com&amp;color=%2329527A&amp;ctz=Europe%2FMadrid" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-{%endif%}
+<div id="buttonServViews" class="row text-center">
+    <div class"col-lg-12 col-md-12 col-xs-12">
+        <a href="EventosCalendar"><button type="button" class="btn btn-primary"><i class="fa fa-times"></i>Gestionar Calendario</button></a>
+    </div>
+</div>
+
+
+
 {% endblock %}
 

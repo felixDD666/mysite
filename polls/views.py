@@ -5,7 +5,7 @@ from django.views import generic
 #EMAILS
 from django.core.mail import send_mail
 from .forms import ContactForm
-from .models import Cliente, Cita, Categoria, Post
+from .models import Cliente, Visita, Categoria, Post, Mensaje
 
 
 from django.utils import timezone
@@ -39,6 +39,9 @@ def servicio5(request):
     
 def servicio6(request):
     return render(request,'polls/servicio6.html',{})
+
+def EventosCalendar(request):
+    return render(request,'polls/EventosCalendar.html',{})
 
 def homePosts(request):
     posts = Post.objects.order_by("-Fecha_Creacion")
@@ -75,12 +78,15 @@ def contacta(request):
     else:
         form = ContactForm(request.POST)
         if form.is_valid():
+
             nombre = form.cleaned_data['nombre']
             email = form.cleaned_data['email']
             telefono = form.cleaned_data['telefono']
             mensaje = form.cleaned_data['mensaje']
+            newMensaje = Mensaje(nombre = nombre, email = email, telefono = telefono, mensaje = mensaje)
             try:
                 send_mail("Nuevo mensaje de " + nombre, "Email: " + email + "\n\nTelefono: " + telefono + "\n\nContenido: " + mensaje , 'podoAlvaro@gmail.com', ['agpodologia@gmail.com'])
+                newMensaje.save()
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return HttpResponseRedirect("thanks")

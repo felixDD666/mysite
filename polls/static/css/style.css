@@ -248,6 +248,10 @@
 #textNavContact{
   color: black;
 }
+.postFotos{
+  width: 400px;
+  height: 500px;
+}
 
 /*CSS para el thanks*/
 #bodyThanks{
@@ -289,6 +293,8 @@
 .textoServicios{
   color: black;
   font-size: 130%;
+  text-align: justify;
+  padding-bottom: 25px;
 }
 
 /*Guardar para boton con icono
@@ -338,6 +344,45 @@
   
 }
 */
+/*CSS para la vista de las citas*/
+#buttonCrearCita{
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+#cuerpoCitas{
+  margin-top: 40px;
+}
+#output{
+  margin-top: 20px;
+  background-color: black;
+  color: white;
+}
+#when1{
+  width: 180px;
+}
+#when2{
+  width: 180px;
+}
+#iframeCalendar{
+  background-color: #00d1f1;
+}
+.citasField1{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.citasField2{
+  margin-top: 30px;
+}
+#citasFields{
+  margin-top: 50px;
+}
+#authorize-div{
+  font-size: 20px;
+}
+#authButton{
+  margin-top: 15px;
+}
+
 
 /*Admin con fondo azul y logo 3*/
 #siteName{
@@ -370,6 +415,15 @@
 tbody{
   background-color: white;
 }
+.vTextField{
+  background-color: rgba(105,197,203,0.4)!important;
+  color: black!important;
+}
+.vLargeTextField{
+  background-color: rgba(105,197,203,0.4)!important;
+  color: black!important;
+}
+
 
 
 
