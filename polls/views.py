@@ -6,6 +6,7 @@ from django.views import generic
 from django.core.mail import send_mail
 from .forms import ContactForm
 from .models import Cliente, Visita, Categoria, Post, Mensaje
+from django.views.decorators.clickjacking import xframe_options_exempt
 
 
 from django.utils import timezone

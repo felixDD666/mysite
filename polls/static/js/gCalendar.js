@@ -1,6 +1,6 @@
  // Your Client ID can be retrieved from your project in the Google
       // Developer Console, https://console.developers.google.com
-      var CLIENT_ID = '814377885277-nrbv8p0stihckceu3opv7gokof2f3u88.apps.googleusercontent.com';
+      var CLIENT_ID = '1010938660321-ts2ibcqj4phe4f59elgspj8mm9cpf65g.apps.googleusercontent.com';
 
       var SCOPES = ["https://www.googleapis.com/auth/calendar"];
 
@@ -128,8 +128,7 @@
       }
 
       function clickCrearCita(){
-        console.log("Nombre: " + $('#summary').val())
-        console.log("Fecha: " + $('#when').val())
+        
         var event = {
           'summary': $('#summary').val(),
           'location': $('#where').val(),
