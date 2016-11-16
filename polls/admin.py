@@ -30,7 +30,25 @@ class VisitasAdmin(admin.ModelAdmin):
 
 admin.site.register(Visita, VisitasAdmin)  
 
+class CategoryAdmin(admin.ModelAdmin):
+	fieldsets = [
+		(None,               {'fields': ['Nombre']})
+	]
+	search_fields = ['Nombre']
 
+admin.site.register(Categoria, CategoryAdmin)
+
+
+class PostsAdmin(admin.ModelAdmin):
+	fieldsets = [
+		(None,               {'fields': ['Titulo','Contenido','Categoria','Publico_Privado','Foto']}),
+		('Date information', {'fields': ['Fecha_Creacion']}),
+	]
+	list_display = ('Titulo', 'Contenido', 'Fecha_Creacion' , 'Categoria','Foto')
+	list_filter = ['Fecha_Creacion']
+	search_fields = ['Titulo']
+
+admin.site.register(Post, PostsAdmin)
 
 class MensajesAdmin(admin.ModelAdmin):
 	fieldsets = [
