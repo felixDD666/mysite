@@ -58,10 +58,9 @@
         
      <br><br><br><br><br>
         <div class= "container">
-            <!--Repasar esto para que salgan los post por categoria-->
             <div class="row">
                 {% for category in categories %}
-                    <h1 id="categoryTitle" class="text-center">{{category.name}}</h1>
+                    <h1 id="categoryTitle" class="text-center">{{category.Nombre}}</h1>
                     {% for post in category.post_set.all reversed %}
                     <div class="row">
                         <div class = "col-lg-8 col-md-10">

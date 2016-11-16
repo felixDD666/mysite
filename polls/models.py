@@ -6,49 +6,44 @@ from django.utils import timezone
 
 class Cliente(models.Model):
     Nombre = models.CharField(max_length=200)
-    Apellido1 = models.CharField(max_length=200)
-    Apellido2 = models.CharField(max_length=200)
+    Primer_Apellido = models.CharField(max_length=200)
+    Segundo_Apellido = models.CharField(max_length=200)
     Telefono = models.CharField(max_length=200)
     Email = models.EmailField(max_length=200)
     Domicilio = models.CharField(max_length=200)
-    Fecha_Nacimiento = models.CharField(max_length=200)
+    Fecha_Nacimiento = models.DateField()
     Antecedentes_Personales = models.TextField()
     Antecedentes_Familiares = models.TextField()
-    Historia_Clinica = models.TextField()
-    Dia_registro = models.DateTimeField('date published')
+    Historia_Clinica = models.TextField('Historia Clinica')
+    Dia_registro = models.DateTimeField('Fecha')
     def __str__(self):
-        return self.Nombre
+        return self.Nombre + " " + self.Primer_Apellido + " " + self.Segundo_Apellido
         
     def was_published_recently(self):
         return self.Dia_registro >= timezone.now() - datetime.timedelta(days=1)
 
 class Visita(models.Model):
-    Cliente = models.CharField(max_length=200)
-    Apellido1 = models.CharField(max_length=200)
-    Apellido2 = models.CharField(max_length=200)
+    Cliente = models.ForeignKey(Cliente)
     Diagnostico = models.TextField()
     Tratamiento = models.TextField()
     Observaciones = models.TextField()
-    Dia = models.DateTimeField('date') 
-    def __str__(self):
-        return self.Cliente
+    Dia = models.DateField("Dia de la visita") 
 
     def was_published_recently(self):
         return self.Dia_registro >= timezone.now() - datetime.timedelta(days=1)
 
 
 class Categoria(models.Model):
-    name = models.CharField(max_length=200)
-    dateOfCreation = models.DateTimeField('date')
+    Nombre = models.CharField(max_length=200)
 
     def __str__(self):
-        return self.name
+        return self.Nombre
 
 class Post(models.Model):
     Titulo = models.CharField(max_length=200)
     Contenido = models.TextField()
     Categoria = models.ForeignKey(Categoria)
-    Fecha_Creacion = models.DateTimeField('date')
+    Fecha_Creacion = models.DateTimeField('Fecha de creacion')
     PUBLICO = 'pub'
     PRIVADO = 'pri'
     pORp_choices = (
@@ -66,10 +61,8 @@ class Post(models.Model):
 
         
 class Mensaje(models.Model):
-    nombre = models.CharField(max_length=200)
-    email = models.CharField(max_length=200)
-    telefono = models.CharField(max_length=200)
-    mensaje = models.TextField();
+    Nombre = models.CharField(max_length=200)
+    Email = models.CharField(max_length=200)
+    Telefono = models.CharField(max_length=200)
+    Mensaje = models.TextField();
 
-    def __str__(self):
-        return self.nombre

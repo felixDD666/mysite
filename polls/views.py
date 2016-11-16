@@ -5,7 +5,7 @@ from django.views import generic
 #EMAILS
 from django.core.mail import send_mail
 from .forms import ContactForm
-from .models import Cliente, Visita, Categoria, Post, Mensaje
+from .models import *
 from django.views.decorators.clickjacking import xframe_options_exempt
 
 
@@ -46,7 +46,7 @@ def EventosCalendar(request):
 
 def homePosts(request):
     posts = Post.objects.order_by("-Fecha_Creacion")
-    categories = Categoria.objects.order_by("-dateOfCreation")
+    categories = Categoria.objects.order_by("Nombre")
     return render(request,'polls/homePosts.html',{
             "posts":posts,
             "categories":categories,
@@ -84,7 +84,7 @@ def contacta(request):
             email = form.cleaned_data['email']
             telefono = form.cleaned_data['telefono']
             mensaje = form.cleaned_data['mensaje']
-            newMensaje = Mensaje(nombre = nombre, email = email, telefono = telefono, mensaje = mensaje)
+            newMensaje = Mensaje(Nombre = nombre, Email = email, Telefono = telefono, Mensaje = mensaje)
             try:
                 send_mail("Nuevo mensaje de " + nombre, "Email: " + email + "\n\nTelefono: " + telefono + "\n\nContenido: " + mensaje , 'podoAlvaro@gmail.com', ['agpodologia@gmail.com'])
                 newMensaje.save()
