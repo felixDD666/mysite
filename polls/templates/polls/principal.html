@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+   
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Podología Gómez</title>
+
+    <!-- css -->
+    <link href="../../static/css/bootstrap.css" rel="stylesheet">
+    <link href="../../static/css/style.css" rel="stylesheet" media="screen">
+    <link href="../../static/css/agency.css" rel="stylesheet">
+    <!--font awesome(iconos y  tal)-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <!--Sin uso por el momento   -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    
+
+    
+
+
+    <!--angularJS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.1/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.1/angular-route.js"></script>
+
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    
+    <!--JavaScript-->
+    <script type="text/javascript" src="../../static/js/principal.js"></script>
+    
+    
+
+ 
+
+</head>
+
+<body id="page-top" class="index" ng-app="app">
+
+    <!-- PESTAÑAS -->
+    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container" ng-controller="Controlador2">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+
+                <a id="nombre" class="navbar-brand page-scroll" href="#page-top">Álvaro Gómez - Podólogo</a>
+                <img class ="imgMenu" src="../../static/polls/images/pieIcon.png">
+
+            </div>
+        
+            
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#TuPodologo">Conoce a tu podólogo</a>
+                    </li>
+                    <li>
+                        
+                        <a class="page-scroll" href="#portfolio">Servicios</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#blog">Blog</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contacta</a>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+        
+    </nav>
+
+    <!-- CABECERA -->
+    <header>
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in"></div>
+                <div class="intro-heading">¿QUIERES TENER UNOS PIES SANOS?</div>
+                <a href="#expli" class="page-scroll btn btn-xl">Quiero saber más</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- QUE ES LA PODOLOGIA -->
+    <section id="expli" class="bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-xs-12 text-center">
+                    <h2 class="section-heading">La podología</h2>
+                    <br><br>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12">
+                    <span class="fa-stack fa-4x">
+                        <i id="icons" class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-heartbeat fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">¿Qué es?</h4>
+                    <p class="text-muted">La podología es la rama de la medicina que se encarga del estudio, diagnóstico y tratamiento de las enfermedades y alteraciones que afectan el pie.</p>
+                </div>
+                <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12">
+                    <span class="fa-stack fa-4x">
+                        <i id="icons" class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-question fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">¿Por qué?</h4>
+                    <p class="text-muted">Los pies son nuestros cimientos y nuestro medio de transporte en las actividades del día a día y necesitamos cuidarlos.</p>
+                </div>
+                <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12">
+                    <span class="fa-stack fa-4x">
+                        <i id="icons" class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-cogs fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">¿Para qué?</h4>
+                    <p class="text-muted">Para promocionar la salud integral, prevenir de afecciones y deformidades del pie y dar respuesta mediante técnicas diagnósticas y tratamientos adecuados, personalizados para cada paciente.</p>
+                </div>
+            </div>
+            <br><br><br><br>
+            <div class="row text-center">
+                <div class="col-lg-6 col-md-6 col-lg-offset-3 col-md-offset-3 col-xs-12 col-sm-12">
+                    <span class="fa-stack fa-4x">
+                        <i id="icons" class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-globe fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">¿Para quién?</h4>
+                    <p class="text-muted">Desde la infancia, donde observar y hacer un seguimiento del crecimiento de los más pequeños, hasta facilitar el día a día de nuestros pacientes más longevos.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+     <!-- TU PODOLOGO -->
+    <section id="TuPodologo">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-xs-12 text-center">
+                    <h2 class="section-heading">TU PODÓLOGO</h2>
+                    <h3 class="section-subheading text-muted"></h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-xs-12">
+                    <ul class="timeline">
+                        <li>
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="../../static/polls/images/salud.jpeg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4><i>2011-2015</i></h4>
+                                    <h3 class="subheading">Mis primeros pasos</h3>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Comencé mi andadura en la Facultad de Ciencias de la Salud de Málaga.
+                                    Tuve la suerte de colaborar con los departamentos de podología deportiva y biomecánica y de cirugía participando en varios proyectos de investigación</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="../../static/polls/images/barco2.jpg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4><i>2015-2016</i></h4>
+                                    <h3 class="subheading">Camino al doctorado</h3>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Tras concluir los estudios de Grado y siempre siendo fiel a la idea de ofrecerla al paciente un servicio de la mayor calidad y lo mas actualizado posible, me embarqué en el viaje hacia el doctorado cuyo primer puerto fue el Máster en Investigación en Actividad Física y Deporte de Medicina</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="fotoAlvaro" class="timeline-image">
+                                <img class="img-circle img-responsive" src="../../static/polls/images/alvaro.jpeg" alt="">
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4><i>Actualmente</i></h4>
+                                    <h3 class="subheading">Mi experiencia profesional</h3>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Este viaje me ha dado la oportunidad de desarrollarme tanto profesionalmente como en la docencia y la investigación. Hoy día son varias las clinicas que disponen de mis servicios, asi como la primera y segunda plantilla del Málaga Club de futbol, la Universidad, y el curso de Análisis Biomecánico de la Técnica de Carrera</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <a href="formacionC" class="portfolio-box">   
+                                <div class="timeline-image">
+                                    
+                                   <img class="img-circle img-responsive" src="../../static/polls/images/improving.jpg" alt="">
+                                    
+                                </div>
+                            </a>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h3 class="subheading">Mejorando para ti</h3>
+                                    
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Manteniendo firmes mis principios y haciendo cada vez mas interesante este viaje, me he preocupado de tener muy presente la formación continua para lograr poner a su disposición un servicio de la mayor calidad posible.
+                                        <h6><br>Haga click en la foto si desea conocer la formación complementaria que he realizado</p></h6>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="timeline-inverted">
+                            <a href="../../static/polls/CV_alvaro.pdf" download="Álvaro_CV">
+                                <div class="timeline-image">
+                                    <h4 id="cvDownLoadText">Descargar<br>CV</h4> 
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--SERVICIOS movil-->
+    <section class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">SERVICIOS</h2>
+                    <h3 class="section-subheading text-muted">Esto es lo que puedo ofrecerte</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="servicio1" href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img id="imgServ1" src="../../static/polls/images/quiro.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Quiropodología</h4>
+                        
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="servicio2" href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img id="imgServ2" src="../../static/polls/images/biomecanica.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Biomecánica</h4>
+                        
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="servicio3" href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img id="imgServ3" src="../../static/polls/images/podoInfantil.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Podología Infantil</h4>
+                        
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="servicio4" href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img id="imgServ4" src="../../static/polls/images/Orto.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Ortopodología</h4>
+                        
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="servicio5" href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img id="imgServ5" src="../../static/polls/images/diabetico.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Pie de Riesgo</h4>
+                        
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="servicio6" href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img id="imgServ6" src="../../static/polls/images/ciru.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Cirujía</h4>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+     
+
+    <!--Servicios sin movil-->
+    <section class="serviciosSection2">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+                    <h2 class="section-heading">SERVICIOS</h2>
+                    <h3 class="section-subheading text-muted">Esto es lo que puedo ofrecerte</h3>
+                </div>
+            <div class="row no-gutter popup-gallery">
+                <div id="serviciosFoto" class="col-lg-4 col-md-6 col-sm-6">
+                    <a href="servicio1" class="portfolio-box" >
+                        <img id="imgServ1" src="../../static/polls/images/quiro.jpg" class="img-responsive" alt="" >
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    #1
+                                </div>
+                                <div class="project-name">
+                                        <b>Quiropodología</b>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div id="serviciosFoto" class="col-lg-4 col-md-6 col-sm-6">
+                    <a href="servicio2" class="portfolio-box" >
+                        <img id="imgServ2" src="../../static/polls/images/biomecanica.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    #2
+                                </div>
+                                <div class="project-name">
+                                    <b>Biomecánica</b>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div id="serviciosFoto" class="col-lg-4 col-md-6 col-sm-6">
+                    <a href="servicio3" class="portfolio-box" >
+                        <img id="imgServ3" src="../../static/polls/images/podoInfantil.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    #3
+                                </div>
+                                <div class="project-name">
+                                    <b>Podología Infantil</b>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div id="serviciosFoto" class="col-lg-4 col-md-6 col-sm-6">
+                    <a href="servicio4" class="portfolio-box" >
+                        <img id="imgServ4" src="../../static/polls/images/Orto.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    #4
+                                </div>
+                                <div class="project-name">
+                                   <b> Ortopodología</b>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div id="serviciosFoto" class="col-lg-4 col-md-6 col-sm-6">
+                    <a href="servicio5" class="portfolio-box" >
+                        
+                        <img id="imgServ5" src="../../static/polls/images/diabetico.jpg" class="img-responsive" alt="">
+                        
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    #5
+                                </div>
+                                <div class="project-name">
+                                    <b>Pie de riesgo</b>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div id="serviciosFoto" class="col-lg-4 col-md-6 col-sm-6">
+                    <a href="servicio6" class="portfolio-box" >
+                        <img id="imgServ6" src="../../static/polls/images/ciru.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    #6
+                                </div>
+                                <div class="project-name">
+                                    <b>Cirugía</b>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id ="blog">
+        <div class= "container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+                    <h2 class="section-heading">BLOG</h2>
+                    <h3 class="section-subheading text-muted">Enterate de lo último</h3>
+                </div>
+                
+                {% for post in posts %} 
+                    {% if post.id > numPost%}
+                        {%if post.Publico_Privado == "pub"%}
+                        <div class = "row">
+                            <div class = "col-lg-8 col-md-10 col-sm-10">
+                               <a href="{{post.id}}"><h2>{{ post.Titulo }}</h2></a>
+                                <h4>Categoria: {{post.Categoria}}</h4>
+                                <p>{{ post.Contenido }}</p>
+                                <hr>
+                            </div>
+                            <div class= "col-lg-2 col-md-1 col-sm-1">
+                                <a href="{{post.id}}">
+                                    <span id="iconButtonBlog" class="fa-stack fa-4x">
+                                        <i id="icons" class="fa fa-circle fa-stack-2x text-primary"></i>
+                                        <i id="iconsShape" class="fa fa-share fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        </div> 
+                        <br><br><div class="lineaDiv">-</div><br><br>
+                        {%endif%}
+                    {%endif%}
+                {% endfor %}
+            </div>
+            <div class= "row text-center">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
+                    <a href="allPosts"><button type="button" class="btn btn-primary">Ver todos los posts</button></a>
+                </div>   
+
+            </div>
+        </div>
+        
+
+       
+    </section>
+
+   
+
+
+
+
+    <!-- Clients -->
+    <aside class="clients">
+        <div class="container" id="clients">
+            <div class="row text-center">
+                <div class="col-lg-12 col-md-12 col-xs-12 text-center">
+                    <h2 class="section-heading">Entidades en las que colaboro</h2>
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class=" col-xs-1 col-md-2 col-sm-1 col-lg-2">
+                    <a href="#page-top">
+                        <img id = "alvaroLogo" src="../../static/polls/images/logo.jpg" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+
+                <div class="col-xs-1 col-md-2 col-sm-1 col-lg-2">
+                    <a href="https://www.clinicasrincon.com/es" target="_blank">
+                        <img id="cliniRincon"  src="../../static/polls/images/logoRincon.jpg" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+
+                <div class="col-xs-1 col-md-2 col-sm-1 col-lg-2">
+                    <a href="http://amoresyrodriguez.es/" target="_blank">
+                        <img id = "ARlogo" src="../../static/polls/images/ARlogo.jpg" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+
+                
+                <div class="col-xs-1 col-md-2 col-sm-1 col-lg-2">
+                    <a href="http://www.malagacf.com/" target="_blank">
+                        <img id="malagaLogo" src="../../static/polls/images/Logo-Malaga.jpg" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+            
+                <div class="col-xs-1 col-md-2 col-sm-1 col-lg-2">
+                        <a href="http://www.fisiolluch.com/" target="_blank">
+                            <img id = "victor" src="../../static/polls/images/victorlluch.jpg" class="img-responsive img-centered" alt="">
+                        </a>
+                </div>
+                <div class="col-xs-1 col-md-2 col-sm-1 col-lg-2">
+                    <a href="http://www.uma.es/facultad-de-ciencias-de-la-salud" target="_blank">
+                        <img id = "uma" src="../../static/polls/images/uma.png" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+        
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="row" >
+            <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+                <h2 id="contacHeadText" class="section-heading">Dejame saber que necesitas</h2>
+                <h4 id="contactSubText">Pulsa el boton y escribeme un mensaje</h4>
+            </div>
+        </div>
+         
+        <div class="row" >
+            <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+                <a id="buttonContactIcon" class="iconButton" href="contacta">
+                    <span id="iconContact" class="fa-stack fa-4x">
+                        <i id="icons" class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i id="iconsShape" class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+            </div>   
+        </div> 
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <!--<span class="copyright">Copyright &copy; Your Website 2016</span>-->
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <ul class="list-inline social-buttons">
+                        <li><a href="#"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <ul class="list-inline quicklinks">
+                        <!--
+                        <li><a href="#">Privacy Policy</a>
+                        </li>
+                        <li><a href="#">Terms of Use</a>
+                        </li>
+                        -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
+
+<!--Modelo del formulario
+<div class="container" ng-controller = "Controlador">
+            <div class="row" id="contacHead">
+                <div class="col-lg-12 text-center">
+                    <h2 id="contacHead" class="section-heading">Contacta conmigo</h2>
+                    <h3 id="contacSubHead"class="section-subheading text-muted">Dejame saber que necesitas</h3>
+                </div>
+            </div>
+            <div class="row" >
+                <div class="col-lg-12" ng-controller ="Controlador3">
+                    <form method="post" name="sentMessage" id="contactForm" novalidate>
+                       
+                            <div class="col-md-6">
+                                <div class="form-group" >
+                                    <input type="text" class="form-control" placeholder="Tu nombre *" name="name" id="name" ng-model="formData.name" required>
+                                    
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Tu email *" name="email" id="email"  ng-model="formData.mail" ng-class="{ error: sentMessage.email.$error.required && !sentMessage.$pristine, warning: exampleForm.email.$error.email }" required>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" placeholder="Tu telefono *" name="phone" id="phone" ng-model="formData.telf" required>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <textarea class="form-control" placeholder="Tu mensaje *" name="mess" id="message"  ng-model="formData.mess" required></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 text-center">
+                                <span class="help-block text-danger" ng-show="!sentMessage.$pristine && sentMessage.name.$error.required">Debe ingresar el nombre</span>
+                            </div>
+                            <div class="col-lg-12 text-center">
+                                <span class="help-block text-danger" ng-show="!sentMessage.$pristine && sentMessage.email.$error.required">Debe ingresar el email</span>
+                                <span class="help-block text-danger" ng-show="!sentMessage.$pristine && sentMessage.email.$error.email">Email incorrecto</span>
+                            </div>
+                            
+                            <div class="col-lg-12 text-center">
+                                <span class="help-block text-danger" ng-show="!sentMessage.$pristine && sentMessage.phone.$error.required">Debe ingresar el telefono</span>
+                            </div>
+                            <div class="col-lg-12 text-center">
+                                <span class="help-block text-danger" ng-show="!sentMessage.$pristine && sentMessage.mess.$error.required">Mensaje vacío</span>
+                            </div>
+                            <div class="col-lg-12 text-center">
+                                <p class="help-block text-danger" ng-show="errorMinimo">Error: No cumple con el mínimo de caracteres (6)</p>
+                            </div>
+                            <div class="col-lg-12 text-center">
+                                <input name="sendEmail" type="submit" class="btn btn-xl" value="Enviar" ng-disabled="!sentMessage.$valid"/>
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+-->
+
+
+    <!-- Team Section 
+    <h2 class ="alertText">MAPITA 666 CON SITIOS INFERNALES</h2>
+    <section id="blog" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">BLOG</h2>
+                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="" class="img-responsive img-circle" alt="">
+                        <h4>Kay Garland</h4>
+                        <p class="text-muted">Lead Designer</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="" class="img-responsive img-circle" alt="">
+                        <h4>Larry Parker</h4>
+                        <p class="text-muted">Lead Marketer</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="team-member">
+                        <img src="" class="img-responsive img-circle" alt="">
+                        <h4>Diana Pertersen</h4>
+                        <p class="text-muted">Lead Developer</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    -->

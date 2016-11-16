@@ -1,0 +1,81 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en" ng-app = "app">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+     </head>
+
+    <body ng-app = "app" id="adminBody">
+        <!-- Scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://apis.google.com/js/client.js?onload=checkAuth"></script>
+        <script type="text/javascript" src="../../../static/js/gCalendar.js"></script>
+        
+
+
+        <!--CSS-->
+        <link href="../../../static/css/bootstrap.css" rel="stylesheet">
+        <link href="../../../static/css/style.css" rel="stylesheet" media="screen">
+        <link href="../../../static/css/agency.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet" type="text/css">
+        <!--Sin uso por el momento   -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+
+        
+
+        <div class="container">
+            <div id="authButton" class="row text-center">
+            <div id="authorize-div" style="display: none">
+		      <span>Autorizar Acceso a Calendario</span>
+		      <!--Button for the user to click to initiate auth sequence -->
+		      <button id="authorize-button" class="btn btn-primary" onclick="handleAuthClick(event)">
+		        Autorizar
+		      </button>
+		    </div>
+            </div>
+            <div id="cuerpoCitas" class="row text-center">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <iframe id="iframeCalendar" src="https://calendar.google.com/calendar/embed?showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=2&amp;bgcolor=%2333ccff&amp;src=agpodologia%40gmail.com&amp;color=%231B887A&amp;ctz=Europe%2FMadrid" style="border-width:0" width="650" height="600" frameborder="0" scrolling="no"></iframe>
+                </div>
+                <div id="citasFields" class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <h2 id="HeaderCrearCitas">Crear Nueva Cita</h2>
+
+                    <div class="citasField1"><h5>Nombre de la cita:</h5><input id="summary" type="text" name="nombre" value="" /></div>
+
+                    <div class="citasField1"><h5>Donde:</h5> <input id="where"  type="text" name="nombre" value="" /></div>
+
+                    <div class="citasField2"><h5>Desde cuando:</h5> <input id="when1" class="citasField" type="date" name="desde" value="" /></div>
+
+                    <div class="citasField2"><h5>Hasta cuando:</h5> <input id="when2" class="citasField" type="date" name="desde" value="" /></div>
+                    <br><br>
+                    <button id="buttonCrearCita" type="button" class="btn btn-primary" onclick="clickCrearCita()">Crear Cita</button>
+                </div>
+		    </div>
+            <div class="row text-center">
+                <pre id="output"></pre>
+            </div>
+
+		    
+            <br><br>
+            <div class="row text-center">
+                <div class"col-lg-12 col-md-12 col-xs-12">
+                        <a href="../"><button type="button" class="btn btn-primary"><i class="fa fa-times"></i> Volver</button></a>
+                </div>
+            </div>
+            
+        </div>
+
+
+         
+
+       
+    </body>
+ </html>

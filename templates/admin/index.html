@@ -1,0 +1,144 @@
+{% extends "admin/base_site.html" %}
+{% load i18n static %}
+
+{% block extrastyle %}{{ block.super }}
+<link rel="stylesheet" type="text/css" href="{% static "admin/css/dashboard.css" %}" />
+
+{% endblock %}
+
+
+
+
+
+
+{% block coltype %}colMS{% endblock %}
+
+{% block bodyclass %}{{ block.super }} dashboard{% endblock %}
+
+{% block breadcrumbs %}{% endblock %}
+
+{% block content %}
+    <div id="content-main">
+
+    {% if app_list %}
+        {% for app in app_list %}
+            {% if app.name == "Polls" %}
+            <!--Codigo para separar los apartados del ADMIN: GESTION-->
+                <div class="app-{{ app.app_label }} module">
+                    <table>
+                        <caption class = "section_header">
+                            <a href="{{ app.app_url }}" class="section" title="Opciones de Gestion de Clientes y Citas">GESTION</a>
+                        </caption>
+                        {% for model in app.models %}
+                            {% if model.name == "Visitas" or model.name == "Clientes" or model.name == "Mensajes"%}
+                                <tr class="model-{{ model.object_name|lower }}">
+                                    {% if model.admin_url %}
+                                        <th scope="row"><a class="modelNames" href="{{ model.admin_url }}">{{ model.name }}</a></th>
+                                    {% else %}
+                                        <th scope="row">{{ model.name }}</th>
+                                    {% endif %}
+
+                                    {% if model.add_url %}
+                                        <td><a href="{{ model.add_url }}" class="addlink">{% trans 'Add' %}</a></td>
+                                    {% else %}
+                                        <td>&nbsp;</td>
+                                    {% endif %}
+
+                                    {% if model.admin_url %}
+                                        <td><a href="{{ model.admin_url }}" class="changelink">{% trans 'Change' %}</a></td>
+                                    {% else %}
+                                        <td>&nbsp;</td>
+                                    {% endif %}
+                                </tr>
+                            {% endif %}
+                        {% endfor %}
+                    </table>    
+                </div>
+                <!--Codigo para separar los apartados del ADMIN: BLOG-->
+                <div class="app-{{ app.app_label }} module">
+                    <table>
+                        <caption class = "section_header">
+                            <a href="{{ app.app_url }}" class="section" title="Opciones Blog">BLOG</a>
+                        </caption>
+                        {% for model in app.models %}
+                            {% if model.name == "Categorias" or model.name == "Posts" %}
+                                <tr class="model-{{ model.object_name|lower }}">
+                                    {% if model.admin_url %}
+                                        <th scope="row"><a class="modelNames" href="{{ model.admin_url }}">{{ model.name }}</a></th>
+                                    {% else %}
+                                        <th scope="row">{{ model.name }}</th>
+                                    {% endif %}
+
+                                    {% if model.add_url %}
+                                        <td><a href="{{ model.add_url }}" class="addlink">{% trans 'Add' %}</a></td>
+                                    {% else %}
+                                        <td>&nbsp;</td>
+                                    {% endif %}
+
+                                    {% if model.admin_url %}
+                                        <td><a href="{{ model.admin_url }}" class="changelink">{% trans 'Change' %}</a></td>
+                                    {% else %}
+                                        <td>&nbsp;</td>
+                                    {% endif %}
+                                </tr>
+                            {% endif %}
+                        {% endfor %}
+                    </table>    
+                </div>
+            {% else %}
+                <!--Codigo para separar los apartados del ADMIN: SUPERUSERS-->
+                <div class="app-{{ app.app_label }} module">
+                <table>
+                <caption class = "section_header">
+                        <a href="{{ app.app_url }}" class="section" title="Generado Automatico">SuperUsers</a>
+                </caption>
+                {% for model in app.models %}
+                    {% if model.name == "Users"%}
+                        <tr class="model-{{ model.object_name|lower }}">
+                    {% if model.admin_url %}
+                        <th scope="row"><a class="modelNames" href="{{ model.admin_url }}">Usuarios</a></th>
+                    {% else %}
+                        <th scope="row">{{ model.name }}</th>
+                    {% endif %}
+
+                    {% if model.add_url %}
+                        <td><a href="{{ model.add_url }}" class="addlink">{% trans 'Add' %}</a></td>
+                    {% else %}
+                        <td>&nbsp;</td>
+                    {% endif %}
+
+                    {% if model.admin_url %}
+                        <td><a href="{{ model.admin_url }}" class="changelink">{% trans 'Change' %}</a></td>
+                    {% else %}
+                        <td>&nbsp;</td>
+                    {% endif %}
+                    </tr>
+                    {% endif %}
+                    
+                {% endfor %}
+                </table>
+                </div>
+                {% endif %}
+            
+        {% endfor %}
+    {% else %}
+        <p>{% trans "You don't have permission to edit anything." %}</p>
+    {% endif %}
+    </div>
+{% endblock %}
+
+
+
+
+
+{% block sidebar %}
+<div id="buttonServViews" class="row text-center">
+    <div class"col-lg-12 col-md-12 col-xs-12">
+        <a href="EventosCalendar"><button type="button" class="btn btn-primary"><i class="fa fa-times"></i>Gestionar Calendario</button></a>
+    </div>
+</div>
+
+
+
+{% endblock %}
+
