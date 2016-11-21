@@ -19,8 +19,7 @@ class Cliente(models.Model):
     def __str__(self):
         return self.Nombre + " " + self.Primer_Apellido + " " + self.Segundo_Apellido
         
-    def was_published_recently(self):
-        return self.Dia_registro >= timezone.now() - datetime.timedelta(days=1)
+    
 
 class Visita(models.Model):
     Cliente = models.ForeignKey(Cliente)
@@ -29,8 +28,6 @@ class Visita(models.Model):
     Observaciones = models.TextField()
     Dia = models.DateField("Dia de la visita") 
 
-    def was_published_recently(self):
-        return self.Dia_registro >= timezone.now() - datetime.timedelta(days=1)
 
 
 class Categoria(models.Model):

@@ -1,4 +1,4 @@
- // Your Client ID can be retrieved from your project in the Google
+
       // Developer Console, https://console.developers.google.com
       var CLIENT_ID = '1010938660321-ts2ibcqj4phe4f59elgspj8mm9cpf65g.apps.googleusercontent.com';
 
@@ -37,7 +37,6 @@
        * @param {Object} authResult Authorization result.
        */
       function handleAuthResult(authResult){
-        console.log(authResult)
         var authorizeDiv = document.getElementById('authorize-div');
         if (authResult && !authResult.error) {
           // Hide auth UI, then load client library.

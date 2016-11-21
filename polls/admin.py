@@ -7,10 +7,12 @@ from django.utils import timezone
 
 class ClientesAdmin(admin.ModelAdmin):
     fieldsets = [
-        (None,               {'fields': ['Nombre','Primer_Apellido','Segundo_Apellido','Telefono','Email','Domicilio','Fecha_Nacimiento','Antecedentes_Personales','Antecedentes_Familiares','Historia_Clinica']}),
+        (None,               {'fields': ['Nombre','Primer_Apellido','Segundo_Apellido','Telefono','Email',
+        	'Domicilio','Fecha_Nacimiento','Antecedentes_Personales','Antecedentes_Familiares','Historia_Clinica']}),
         ('Fecha de Creacion', {'fields': ['Dia_registro']}),
     ]
-    list_display = ('Nombre','Primer_Apellido','Segundo_Apellido','Telefono','Email','Domicilio','Fecha_Nacimiento','Antecedentes_Personales','Antecedentes_Familiares','Historia_Clinica', 'Dia_registro')
+    list_display = ('Nombre','Primer_Apellido','Segundo_Apellido','Telefono','Email',
+    	'Domicilio','Fecha_Nacimiento','Antecedentes_Personales','Antecedentes_Familiares','Historia_Clinica', 'Dia_registro')
     list_filter = ['Dia_registro']
     search_fields = ['Nombre']
 
