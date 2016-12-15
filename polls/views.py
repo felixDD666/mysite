@@ -3,7 +3,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 from django.views import generic
 #EMAILS
-from django.core.mail import send_mail
+from django.core.mail import send_mail, BadHeaderError
 from .forms import ContactForm
 from .models import *
 from django.views.decorators.clickjacking import xframe_options_exempt
